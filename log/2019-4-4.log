@@ -1,0 +1,1212 @@
+2019-04-04 16:34:25,897 testsendmailandcreatecontacts.py[line:38] INFO "0 y"
+2019-04-04 16:34:25,898 testsendmailandcreatecontacts.py[line:44] DEBUG y
+2019-04-04 16:34:25,898 testsendmailandcreatecontacts.py[line:84] INFO ----调用关键字驱动-----
+2019-04-04 16:34:25,899 testsendmailandcreatecontacts.py[line:91] INFO 测试用例一共 13 步
+2019-04-04 16:34:29,362 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:34:29,363 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:49571
+2019-04-04 16:34:34,345 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session HTTP/1.1" 200 788
+2019-04-04 16:34:34,346 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:34,346 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “打开浏览器” 成功
+2019-04-04 16:34:34,477 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/url {"url": "https://www.126.com/", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:34,478 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:37,025 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/url HTTP/1.1" 200 72
+2019-04-04 16:34:37,025 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:37,026 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “访问被测试网址” 成功
+2019-04-04 16:34:37,137 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/window/current/maximize {"windowHandle": "current", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:37,138 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:38,319 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/window/current/maximize HTTP/1.1" 200 72
+2019-04-04 16:34:38,319 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:38,319 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “窗口最大化” 成功
+2019-04-04 16:34:43,458 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待进入126邮箱网站主页加载完成” 成功
+2019-04-04 16:34:43,554 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:43,555 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:43,562 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 19565
+2019-04-04 16:34:43,563 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:43,563 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “断言当前页面是否存在预期结果” 成功
+2019-04-04 16:34:43,696 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:43,696 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:43,716 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:43,717 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:43,717 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/frame {"id": {"ELEMENT": "0.13839384382711573-1", "element-6066-11e4-a52e-4f735466cecf": "0.13839384382711573-1"}, "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:43,717 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:43,725 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/frame HTTP/1.1" 200 72
+2019-04-04 16:34:43,725 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:43,725 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “调取action方法，定位iframe元素并且切换进去” 成功
+2019-04-04 16:34:45,847 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “进入后等待两秒” 成功
+2019-04-04 16:34:45,952 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:45,952 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:45,972 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 102
+2019-04-04 16:34:45,973 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:45,973 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.4523412872673098-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:45,973 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:46,064 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-1/value HTTP/1.1" 200 72
+2019-04-04 16:34:46,064 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:46,065 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “调取action方法定位，并在输入框输入用户名” 成功
+2019-04-04 16:34:46,205 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:46,206 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:46,221 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 102
+2019-04-04 16:34:46,221 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:46,221 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.4523412872673098-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:46,222 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:46,287 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-2/value HTTP/1.1" 200 72
+2019-04-04 16:34:46,287 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:46,288 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “调取action方法定位，并在输入框输入密码” 成功
+2019-04-04 16:34:46,449 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "id", "value": "dologin", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:46,449 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:46,470 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 102
+2019-04-04 16:34:46,471 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:46,471 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-3/click {"id": "0.4523412872673098-3", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:46,472 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:46,566 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.4523412872673098-3/click HTTP/1.1" 200 72
+2019-04-04 16:34:46,567 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:46,567 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “点击登陆按钮” 成功
+2019-04-04 16:34:49,668 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待” 成功
+2019-04-04 16:34:49,816 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:49,816 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,281 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 124351
+2019-04-04 16:34:56,283 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,283 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “断言登陆成功后页面是否存在登陆者账号” 成功
+2019-04-04 16:34:56,396 testsendmailandcreatecontacts.py[line:152] INFO 用例 ’登陆邮箱‘ 执行通过
+2019-04-04 16:34:56,450 testsendmailandcreatecontacts.py[line:173] INFO 共 "3" 条用例，"1" 条需要被执行，成功执行 "1 条"
+2019-04-04 16:34:56,450 testsendmailandcreatecontacts.py[line:38] INFO "1 y"
+2019-04-04 16:34:56,450 testsendmailandcreatecontacts.py[line:44] DEBUG y
+2019-04-04 16:34:56,461 createcontacts.py[line:30] INFO 0 y
+2019-04-04 16:34:56,461 createcontacts.py[line:36] INFO 开始添加联系人 'zhangsan@qq.com'
+2019-04-04 16:34:56,461 createcontacts.py[line:41] INFO 2
+2019-04-04 16:34:56,462 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:34:56,462 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,462 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,484 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:56,484 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,484 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,484 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,501 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed HTTP/1.1" 200 72
+2019-04-04 16:34:56,501 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,501 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待通讯录按钮” 成功
+2019-04-04 16:34:56,601 createcontacts.py[line:41] INFO 3
+2019-04-04 16:34:56,601 createcontacts.py[line:86] DEBUG clicks('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:34:56,601 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,601 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,608 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:56,609 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,609 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,609 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,650 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click HTTP/1.1" 200 72
+2019-04-04 16:34:56,650 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,651 createcontacts.py[line:107] DEBUG 执行步骤 “点击通讯录” 成功
+2019-04-04 16:34:56,763 createcontacts.py[line:41] INFO 4
+2019-04-04 16:34:56,764 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:34:56,764 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,765 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,822 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:56,823 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,823 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,823 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,836 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed HTTP/1.1" 200 72
+2019-04-04 16:34:56,836 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,837 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待新建联系人按钮的出现” 成功
+2019-04-04 16:34:56,941 createcontacts.py[line:41] INFO 5
+2019-04-04 16:34:56,942 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:34:56,942 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,942 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:56,951 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:56,951 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:56,952 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:56,952 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,020 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click HTTP/1.1" 200 72
+2019-04-04 16:34:57,021 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,021 createcontacts.py[line:107] DEBUG 执行步骤 “点击新建联系人” 成功
+2019-04-04 16:34:57,148 createcontacts.py[line:41] INFO 6
+2019-04-04 16:34:57,149 createcontacts.py[line:86] DEBUG input_srting('xpath','//input[@id = "input_N"]',u'杨盼')
+2019-04-04 16:34:57,149 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@id = \"input_N\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,150 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,170 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:57,171 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,171 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-3/value {"text": "\u6768\u76fc", "value": ["\u6768", "\u76fc"], "id": "0.42692510339396983-3", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,171 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,221 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-3/value HTTP/1.1" 200 72
+2019-04-04 16:34:57,221 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,221 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人姓名” 成功
+2019-04-04 16:34:57,340 createcontacts.py[line:41] INFO 7
+2019-04-04 16:34:57,340 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_MAIL_wrap"]//input',u'zhangsan@qq.com')
+2019-04-04 16:34:57,340 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_MAIL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,340 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,359 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:57,360 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,360 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-4/value {"text": "zhangsan@qq.com", "value": ["z", "h", "a", "n", "g", "s", "a", "n", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-4", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,360 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,456 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-4/value HTTP/1.1" 200 72
+2019-04-04 16:34:57,457 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,457 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人电子邮箱” 成功
+2019-04-04 16:34:57,581 createcontacts.py[line:41] INFO 8
+2019-04-04 16:34:57,581 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "设为星标联系人"]',u'否')
+2019-04-04 16:34:57,582 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u8bbe\u4e3a\u661f\u6807\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,582 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,600 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:57,601 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,601 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-5/click {"id": "0.42692510339396983-5", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,601 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,642 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-5/click HTTP/1.1" 200 72
+2019-04-04 16:34:57,643 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,643 createcontacts.py[line:107] DEBUG 执行步骤 “设置为星际联系人” 成功
+2019-04-04 16:34:57,751 createcontacts.py[line:41] INFO 9
+2019-04-04 16:34:57,751 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_TEL_wrap"]//input',u'15070662525')
+2019-04-04 16:34:57,751 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_TEL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,752 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,769 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:57,770 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,770 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-6/value {"text": "15070662525", "value": ["1", "5", "0", "7", "0", "6", "6", "2", "5", "2", "5"], "id": "0.42692510339396983-6", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,770 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,856 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-6/value HTTP/1.1" 200 72
+2019-04-04 16:34:57,856 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,857 createcontacts.py[line:107] DEBUG 执行步骤 “输入手机号” 成功
+2019-04-04 16:34:57,973 createcontacts.py[line:41] INFO 10
+2019-04-04 16:34:57,974 createcontacts.py[line:86] DEBUG input_srting('xpath','//textarea[@id = "input_DETAIL"]',u'别名')
+2019-04-04 16:34:57,974 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//textarea[@id = \"input_DETAIL\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,974 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:57,993 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:57,993 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:57,994 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-7/value {"text": "\u522b\u540d", "value": ["\u522b", "\u540d"], "id": "0.42692510339396983-7", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:57,994 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:58,041 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-7/value HTTP/1.1" 200 72
+2019-04-04 16:34:58,041 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:58,041 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人备注信息” 成功
+2019-04-04 16:34:58,169 createcontacts.py[line:41] INFO 11
+2019-04-04 16:34:58,170 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "确 定"]')
+2019-04-04 16:34:58,170 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u786e \u5b9a\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:58,170 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:58,188 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:34:58,189 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:58,189 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-8/click {"id": "0.42692510339396983-8", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:34:58,190 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:34:58,241 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-8/click HTTP/1.1" 200 72
+2019-04-04 16:34:58,241 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:34:58,241 createcontacts.py[line:107] DEBUG 执行步骤 “点击确认” 成功
+2019-04-04 16:34:58,349 createcontacts.py[line:41] INFO 12
+2019-04-04 16:34:58,350 createcontacts.py[line:86] DEBUG sleep(u'2')
+2019-04-04 16:35:00,350 createcontacts.py[line:107] DEBUG 执行步骤 “等待2秒” 成功
+2019-04-04 16:35:00,505 createcontacts.py[line:41] INFO 13
+2019-04-04 16:35:00,505 createcontacts.py[line:86] DEBUG assert_string_in_pagesource(u'zhangsan@qq.com')
+2019-04-04 16:35:00,505 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,505 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:00,522 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 177554
+2019-04-04 16:35:00,525 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:00,525 createcontacts.py[line:107] DEBUG 执行步骤 “断言联系人是否添加成功” 成功
+2019-04-04 16:35:00,718 createcontacts.py[line:30] INFO 1 y
+2019-04-04 16:35:00,718 createcontacts.py[line:36] INFO 开始添加联系人 'lisi@qq.com'
+2019-04-04 16:35:00,718 createcontacts.py[line:41] INFO 2
+2019-04-04 16:35:00,719 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:00,719 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,719 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:00,730 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:00,730 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:00,730 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,730 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:00,742 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:00,742 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:00,743 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待通讯录按钮” 成功
+2019-04-04 16:35:00,864 createcontacts.py[line:41] INFO 3
+2019-04-04 16:35:00,865 createcontacts.py[line:86] DEBUG clicks('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:00,865 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,865 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:00,873 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:00,873 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:00,873 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,873 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:00,895 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click HTTP/1.1" 200 72
+2019-04-04 16:35:00,895 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:00,895 createcontacts.py[line:107] DEBUG 执行步骤 “点击通讯录” 成功
+2019-04-04 16:35:00,999 createcontacts.py[line:41] INFO 4
+2019-04-04 16:35:00,999 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:00,999 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:00,999 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,009 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:01,010 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,010 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,010 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,018 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:01,019 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,019 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待新建联系人按钮的出现” 成功
+2019-04-04 16:35:01,163 createcontacts.py[line:41] INFO 5
+2019-04-04 16:35:01,163 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:01,164 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,164 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,171 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:01,172 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,172 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,172 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,201 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click HTTP/1.1" 200 72
+2019-04-04 16:35:01,201 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,201 createcontacts.py[line:107] DEBUG 执行步骤 “点击新建联系人” 成功
+2019-04-04 16:35:01,324 createcontacts.py[line:41] INFO 6
+2019-04-04 16:35:01,325 createcontacts.py[line:86] DEBUG input_srting('xpath','//input[@id = "input_N"]',u'李四')
+2019-04-04 16:35:01,325 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@id = \"input_N\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,325 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,335 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:01,335 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,336 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-9/value {"text": "\u674e\u56db", "value": ["\u674e", "\u56db"], "id": "0.42692510339396983-9", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,336 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,381 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-9/value HTTP/1.1" 200 72
+2019-04-04 16:35:01,381 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,381 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人姓名” 成功
+2019-04-04 16:35:01,497 createcontacts.py[line:41] INFO 7
+2019-04-04 16:35:01,498 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_MAIL_wrap"]//input',u'lisi@qq.com')
+2019-04-04 16:35:01,498 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_MAIL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,498 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,512 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:01,513 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,513 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-10/value {"text": "lisi@qq.com", "value": ["l", "i", "s", "i", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-10", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,513 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,606 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-10/value HTTP/1.1" 200 72
+2019-04-04 16:35:01,606 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,607 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人电子邮箱” 成功
+2019-04-04 16:35:01,714 createcontacts.py[line:41] INFO 8
+2019-04-04 16:35:01,715 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "设为星标联系人"]',u'是')
+2019-04-04 16:35:01,716 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u8bbe\u4e3a\u661f\u6807\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,716 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,725 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:01,726 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,726 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-11/click {"id": "0.42692510339396983-11", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,726 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,766 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-11/click HTTP/1.1" 200 72
+2019-04-04 16:35:01,767 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,767 createcontacts.py[line:107] DEBUG 执行步骤 “设置为星际联系人” 成功
+2019-04-04 16:35:01,872 createcontacts.py[line:41] INFO 9
+2019-04-04 16:35:01,872 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_TEL_wrap"]//input',u'15070662526')
+2019-04-04 16:35:01,872 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_TEL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,872 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,880 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:01,880 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,880 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-12/value {"text": "15070662526", "value": ["1", "5", "0", "7", "0", "6", "6", "2", "5", "2", "6"], "id": "0.42692510339396983-12", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:01,880 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:01,960 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-12/value HTTP/1.1" 200 72
+2019-04-04 16:35:01,960 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:01,960 createcontacts.py[line:107] DEBUG 执行步骤 “输入手机号” 成功
+2019-04-04 16:35:02,065 createcontacts.py[line:41] INFO 10
+2019-04-04 16:35:02,066 createcontacts.py[line:86] DEBUG input_srting('xpath','//textarea[@id = "input_DETAIL"]',u'朋友')
+2019-04-04 16:35:02,066 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//textarea[@id = \"input_DETAIL\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:02,066 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:02,074 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:02,074 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:02,075 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-13/value {"text": "\u670b\u53cb", "value": ["\u670b", "\u53cb"], "id": "0.42692510339396983-13", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:02,075 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:02,112 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-13/value HTTP/1.1" 200 72
+2019-04-04 16:35:02,113 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:02,113 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人备注信息” 成功
+2019-04-04 16:35:02,218 createcontacts.py[line:41] INFO 11
+2019-04-04 16:35:02,219 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "确 定"]')
+2019-04-04 16:35:02,219 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u786e \u5b9a\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:02,219 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:02,227 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:02,227 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:02,228 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-14/click {"id": "0.42692510339396983-14", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:02,228 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:03,788 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-14/click HTTP/1.1" 200 72
+2019-04-04 16:35:03,788 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:03,788 createcontacts.py[line:107] DEBUG 执行步骤 “点击确认” 成功
+2019-04-04 16:35:03,895 createcontacts.py[line:41] INFO 12
+2019-04-04 16:35:03,895 createcontacts.py[line:86] DEBUG sleep(u'2')
+2019-04-04 16:35:05,895 createcontacts.py[line:107] DEBUG 执行步骤 “等待2秒” 成功
+2019-04-04 16:35:06,046 createcontacts.py[line:41] INFO 13
+2019-04-04 16:35:06,047 createcontacts.py[line:86] DEBUG assert_string_in_pagesource(u'lisi@qq.com')
+2019-04-04 16:35:06,047 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,047 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,065 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 177962
+2019-04-04 16:35:06,068 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,069 createcontacts.py[line:107] DEBUG 执行步骤 “断言联系人是否添加成功” 成功
+2019-04-04 16:35:06,252 createcontacts.py[line:30] INFO 2 y
+2019-04-04 16:35:06,252 createcontacts.py[line:36] INFO 开始添加联系人 'wanger@qq.com'
+2019-04-04 16:35:06,252 createcontacts.py[line:41] INFO 2
+2019-04-04 16:35:06,252 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:06,252 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,253 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,267 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:06,268 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,268 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,268 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,274 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:06,274 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,274 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待通讯录按钮” 成功
+2019-04-04 16:35:06,382 createcontacts.py[line:41] INFO 3
+2019-04-04 16:35:06,382 createcontacts.py[line:86] DEBUG clicks('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:06,382 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,382 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,389 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:06,390 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,390 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,390 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,413 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click HTTP/1.1" 200 72
+2019-04-04 16:35:06,413 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,413 createcontacts.py[line:107] DEBUG 执行步骤 “点击通讯录” 成功
+2019-04-04 16:35:06,519 createcontacts.py[line:41] INFO 4
+2019-04-04 16:35:06,519 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:06,519 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,519 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,530 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:06,530 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,530 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,531 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,538 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:06,538 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,538 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待新建联系人按钮的出现” 成功
+2019-04-04 16:35:06,818 createcontacts.py[line:41] INFO 5
+2019-04-04 16:35:06,818 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:06,818 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,819 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,826 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:06,826 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,827 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:06,827 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:06,855 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click HTTP/1.1" 200 72
+2019-04-04 16:35:06,855 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:06,855 createcontacts.py[line:107] DEBUG 执行步骤 “点击新建联系人” 成功
+2019-04-04 16:35:07,004 createcontacts.py[line:41] INFO 6
+2019-04-04 16:35:07,005 createcontacts.py[line:86] DEBUG input_srting('xpath','//input[@id = "input_N"]',u'王二')
+2019-04-04 16:35:07,005 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@id = \"input_N\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,005 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,012 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,012 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,012 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-15/value {"text": "\u738b\u4e8c", "value": ["\u738b", "\u4e8c"], "id": "0.42692510339396983-15", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,012 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,057 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-15/value HTTP/1.1" 200 72
+2019-04-04 16:35:07,057 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,057 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人姓名” 成功
+2019-04-04 16:35:07,180 createcontacts.py[line:41] INFO 7
+2019-04-04 16:35:07,180 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_MAIL_wrap"]//input',u'wanger@qq.com')
+2019-04-04 16:35:07,180 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_MAIL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,180 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,188 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,188 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,189 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-16/value {"text": "wanger@qq.com", "value": ["w", "a", "n", "g", "e", "r", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-16", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,189 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,274 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-16/value HTTP/1.1" 200 72
+2019-04-04 16:35:07,275 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,275 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人电子邮箱” 成功
+2019-04-04 16:35:07,406 createcontacts.py[line:41] INFO 8
+2019-04-04 16:35:07,407 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "设为星标联系人"]',u'否')
+2019-04-04 16:35:07,407 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u8bbe\u4e3a\u661f\u6807\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,407 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,413 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,414 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,414 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-17/click {"id": "0.42692510339396983-17", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,414 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,459 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-17/click HTTP/1.1" 200 72
+2019-04-04 16:35:07,459 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,459 createcontacts.py[line:107] DEBUG 执行步骤 “设置为星际联系人” 成功
+2019-04-04 16:35:07,590 createcontacts.py[line:41] INFO 9
+2019-04-04 16:35:07,590 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_TEL_wrap"]//input',u'15070662527')
+2019-04-04 16:35:07,590 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_TEL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,591 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,599 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,599 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,599 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-18/value {"text": "15070662527", "value": ["1", "5", "0", "7", "0", "6", "6", "2", "5", "2", "7"], "id": "0.42692510339396983-18", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,599 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,678 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-18/value HTTP/1.1" 200 72
+2019-04-04 16:35:07,679 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,679 createcontacts.py[line:107] DEBUG 执行步骤 “输入手机号” 成功
+2019-04-04 16:35:07,788 createcontacts.py[line:41] INFO 10
+2019-04-04 16:35:07,789 createcontacts.py[line:86] DEBUG input_srting('xpath','//textarea[@id = "input_DETAIL"]',u'亲戚')
+2019-04-04 16:35:07,789 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//textarea[@id = \"input_DETAIL\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,789 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,797 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,797 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,797 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-19/value {"text": "\u4eb2\u621a", "value": ["\u4eb2", "\u621a"], "id": "0.42692510339396983-19", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,797 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,838 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-19/value HTTP/1.1" 200 72
+2019-04-04 16:35:07,839 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,839 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人备注信息” 成功
+2019-04-04 16:35:07,949 createcontacts.py[line:41] INFO 11
+2019-04-04 16:35:07,950 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "确 定"]')
+2019-04-04 16:35:07,950 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u786e \u5b9a\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,950 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:07,959 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:07,959 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:07,959 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-20/click {"id": "0.42692510339396983-20", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:07,959 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:08,002 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-20/click HTTP/1.1" 200 72
+2019-04-04 16:35:08,003 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:08,003 createcontacts.py[line:107] DEBUG 执行步骤 “点击确认” 成功
+2019-04-04 16:35:08,110 createcontacts.py[line:41] INFO 12
+2019-04-04 16:35:08,110 createcontacts.py[line:86] DEBUG sleep(u'2')
+2019-04-04 16:35:10,111 createcontacts.py[line:107] DEBUG 执行步骤 “等待2秒” 成功
+2019-04-04 16:35:10,213 createcontacts.py[line:41] INFO 13
+2019-04-04 16:35:10,214 createcontacts.py[line:86] DEBUG assert_string_in_pagesource(u'wanger@qq.com')
+2019-04-04 16:35:10,214 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,214 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,230 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 188677
+2019-04-04 16:35:10,233 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,233 createcontacts.py[line:107] DEBUG 执行步骤 “断言联系人是否添加成功” 成功
+2019-04-04 16:35:10,381 createcontacts.py[line:30] INFO 3 y
+2019-04-04 16:35:10,468 createcontacts.py[line:36] INFO 开始添加联系人 'mazi@qq.com'
+2019-04-04 16:35:10,468 createcontacts.py[line:41] INFO 2
+2019-04-04 16:35:10,469 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:10,470 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,470 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,494 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:10,495 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,495 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,495 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,504 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:10,505 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,505 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待通讯录按钮” 成功
+2019-04-04 16:35:10,623 createcontacts.py[line:41] INFO 3
+2019-04-04 16:35:10,623 createcontacts.py[line:86] DEBUG clicks('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:10,623 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,624 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,633 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:10,633 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,633 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,633 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,657 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click HTTP/1.1" 200 72
+2019-04-04 16:35:10,657 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,657 createcontacts.py[line:107] DEBUG 执行步骤 “点击通讯录” 成功
+2019-04-04 16:35:10,798 createcontacts.py[line:41] INFO 4
+2019-04-04 16:35:10,799 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:10,799 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,800 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,902 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:10,902 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,902 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:10,903 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:10,910 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:10,910 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:10,910 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待新建联系人按钮的出现” 成功
+2019-04-04 16:35:11,015 createcontacts.py[line:41] INFO 5
+2019-04-04 16:35:11,016 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:11,016 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,016 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,036 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:11,036 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,036 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,036 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,073 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click HTTP/1.1" 200 72
+2019-04-04 16:35:11,073 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,073 createcontacts.py[line:107] DEBUG 执行步骤 “点击新建联系人” 成功
+2019-04-04 16:35:11,217 createcontacts.py[line:41] INFO 6
+2019-04-04 16:35:11,217 createcontacts.py[line:86] DEBUG input_srting('xpath','//input[@id = "input_N"]',u'麻子')
+2019-04-04 16:35:11,218 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@id = \"input_N\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,218 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,227 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:11,227 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,228 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-21/value {"text": "\u9ebb\u5b50", "value": ["\u9ebb", "\u5b50"], "id": "0.42692510339396983-21", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,228 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,268 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-21/value HTTP/1.1" 200 72
+2019-04-04 16:35:11,268 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,269 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人姓名” 成功
+2019-04-04 16:35:11,454 createcontacts.py[line:41] INFO 7
+2019-04-04 16:35:11,454 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_MAIL_wrap"]//input',u'mazi@qq.com')
+2019-04-04 16:35:11,454 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_MAIL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,455 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,466 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:11,466 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,466 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-22/value {"text": "mazi@qq.com", "value": ["m", "a", "z", "i", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-22", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,467 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,556 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-22/value HTTP/1.1" 200 72
+2019-04-04 16:35:11,557 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,557 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人电子邮箱” 成功
+2019-04-04 16:35:11,694 createcontacts.py[line:41] INFO 8
+2019-04-04 16:35:11,694 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "设为星标联系人"]',u'是')
+2019-04-04 16:35:11,695 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u8bbe\u4e3a\u661f\u6807\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,695 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,704 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:11,704 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,704 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-23/click {"id": "0.42692510339396983-23", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,705 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,814 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-23/click HTTP/1.1" 200 72
+2019-04-04 16:35:11,814 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,815 createcontacts.py[line:107] DEBUG 执行步骤 “设置为星际联系人” 成功
+2019-04-04 16:35:11,952 createcontacts.py[line:41] INFO 9
+2019-04-04 16:35:11,953 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_TEL_wrap"]//input',u'15070662528')
+2019-04-04 16:35:11,953 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_TEL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,953 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:11,963 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:11,963 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:11,963 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-24/value {"text": "15070662528", "value": ["1", "5", "0", "7", "0", "6", "6", "2", "5", "2", "8"], "id": "0.42692510339396983-24", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:11,964 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:12,052 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-24/value HTTP/1.1" 200 72
+2019-04-04 16:35:12,052 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:12,052 createcontacts.py[line:107] DEBUG 执行步骤 “输入手机号” 成功
+2019-04-04 16:35:12,227 createcontacts.py[line:41] INFO 10
+2019-04-04 16:35:12,228 createcontacts.py[line:86] DEBUG input_srting('xpath','//textarea[@id = "input_DETAIL"]',u'敌人')
+2019-04-04 16:35:12,228 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//textarea[@id = \"input_DETAIL\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:12,228 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:12,237 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:12,237 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:12,238 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-25/value {"text": "\u654c\u4eba", "value": ["\u654c", "\u4eba"], "id": "0.42692510339396983-25", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:12,238 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:12,284 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-25/value HTTP/1.1" 200 72
+2019-04-04 16:35:12,285 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:12,285 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人备注信息” 成功
+2019-04-04 16:35:12,399 createcontacts.py[line:41] INFO 11
+2019-04-04 16:35:12,399 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "确 定"]')
+2019-04-04 16:35:12,399 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u786e \u5b9a\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:12,399 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:12,408 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:12,409 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:12,409 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-26/click {"id": "0.42692510339396983-26", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:12,409 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:12,456 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-26/click HTTP/1.1" 200 72
+2019-04-04 16:35:12,457 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:12,457 createcontacts.py[line:107] DEBUG 执行步骤 “点击确认” 成功
+2019-04-04 16:35:12,565 createcontacts.py[line:41] INFO 12
+2019-04-04 16:35:12,565 createcontacts.py[line:86] DEBUG sleep(u'2')
+2019-04-04 16:35:14,565 createcontacts.py[line:107] DEBUG 执行步骤 “等待2秒” 成功
+2019-04-04 16:35:14,695 createcontacts.py[line:41] INFO 13
+2019-04-04 16:35:14,695 createcontacts.py[line:86] DEBUG assert_string_in_pagesource(u'mazi@qq.com')
+2019-04-04 16:35:14,696 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:14,696 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:14,714 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 203525
+2019-04-04 16:35:14,717 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:14,717 createcontacts.py[line:107] DEBUG 执行步骤 “断言联系人是否添加成功” 成功
+2019-04-04 16:35:14,879 createcontacts.py[line:30] INFO 4 n
+2019-04-04 16:35:15,066 createcontacts.py[line:30] INFO 5 y
+2019-04-04 16:35:15,066 createcontacts.py[line:36] INFO 开始添加联系人 'nvwa@qq.com'
+2019-04-04 16:35:15,067 createcontacts.py[line:41] INFO 2
+2019-04-04 16:35:15,067 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:15,067 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:15,067 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:15,074 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:15,075 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:15,075 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:15,075 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:15,080 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:15,081 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:15,081 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待通讯录按钮” 成功
+2019-04-04 16:35:15,178 createcontacts.py[line:41] INFO 3
+2019-04-04 16:35:15,178 createcontacts.py[line:86] DEBUG clicks('xpath','//div[text() = "通讯录"]')
+2019-04-04 16:35:15,178 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[text() = \"\u901a\u8baf\u5f55\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:15,178 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:15,186 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:15,186 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:15,186 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click {"id": "0.42692510339396983-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:15,186 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:15,200 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-1/click HTTP/1.1" 200 577
+2019-04-04 16:35:15,200 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:15,491 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/screenshot {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:15,492 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:15,806 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/screenshot HTTP/1.1" 200 255938
+2019-04-04 16:35:15,807 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,053 createcontacts.py[line:41] INFO 4
+2019-04-04 16:35:16,053 createcontacts.py[line:86] DEBUG waitvisibilityofelementlocated('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:16,053 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,053 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,062 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:16,062 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,063 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,063 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,068 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:16,068 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,069 createcontacts.py[line:107] DEBUG 执行步骤 “显示等待新建联系人按钮的出现” 成功
+2019-04-04 16:35:16,174 createcontacts.py[line:41] INFO 5
+2019-04-04 16:35:16,175 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "新建联系人"]')
+2019-04-04 16:35:16,175 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u65b0\u5efa\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,175 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,183 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 103
+2019-04-04 16:35:16,183 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,184 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click {"id": "0.42692510339396983-2", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,184 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,219 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-2/click HTTP/1.1" 200 72
+2019-04-04 16:35:16,219 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,219 createcontacts.py[line:107] DEBUG 执行步骤 “点击新建联系人” 成功
+2019-04-04 16:35:16,352 createcontacts.py[line:41] INFO 6
+2019-04-04 16:35:16,353 createcontacts.py[line:86] DEBUG input_srting('xpath','//input[@id = "input_N"]',u'女娲')
+2019-04-04 16:35:16,353 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//input[@id = \"input_N\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,353 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,368 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:16,368 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,368 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-27/value {"text": "\u5973\u5a32", "value": ["\u5973", "\u5a32"], "id": "0.42692510339396983-27", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,369 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,421 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-27/value HTTP/1.1" 200 72
+2019-04-04 16:35:16,421 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,421 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人姓名” 成功
+2019-04-04 16:35:16,545 createcontacts.py[line:41] INFO 7
+2019-04-04 16:35:16,546 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_MAIL_wrap"]//input',u'nvwa@qq.com')
+2019-04-04 16:35:16,546 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_MAIL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,546 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,557 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:16,557 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,557 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-28/value {"text": "nvwa@qq.com", "value": ["n", "v", "w", "a", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-28", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,557 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,647 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-28/value HTTP/1.1" 200 72
+2019-04-04 16:35:16,648 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,648 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人电子邮箱” 成功
+2019-04-04 16:35:16,758 createcontacts.py[line:41] INFO 8
+2019-04-04 16:35:16,759 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "设为星标联系人"]',u'是')
+2019-04-04 16:35:16,759 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u8bbe\u4e3a\u661f\u6807\u8054\u7cfb\u4eba\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,759 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,769 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:16,770 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,770 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-29/click {"id": "0.42692510339396983-29", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,771 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,812 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-29/click HTTP/1.1" 200 72
+2019-04-04 16:35:16,813 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,813 createcontacts.py[line:107] DEBUG 执行步骤 “设置为星际联系人” 成功
+2019-04-04 16:35:16,930 createcontacts.py[line:41] INFO 9
+2019-04-04 16:35:16,930 createcontacts.py[line:86] DEBUG input_srting('xpath','//*[@id = "iaddress_TEL_wrap"]//input',u'15070662530')
+2019-04-04 16:35:16,930 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[@id = \"iaddress_TEL_wrap\"]//input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,931 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:16,940 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:16,941 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:16,941 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-30/value {"text": "15070662530", "value": ["1", "5", "0", "7", "0", "6", "6", "2", "5", "3", "0"], "id": "0.42692510339396983-30", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:16,941 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:17,028 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-30/value HTTP/1.1" 200 72
+2019-04-04 16:35:17,029 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:17,029 createcontacts.py[line:107] DEBUG 执行步骤 “输入手机号” 成功
+2019-04-04 16:35:17,138 createcontacts.py[line:41] INFO 10
+2019-04-04 16:35:17,139 createcontacts.py[line:86] DEBUG input_srting('xpath','//textarea[@id = "input_DETAIL"]',u'捏造者')
+2019-04-04 16:35:17,139 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//textarea[@id = \"input_DETAIL\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:17,140 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:17,148 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:17,148 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:17,149 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-31/value {"text": "\u634f\u9020\u8005", "value": ["\u634f", "\u9020", "\u8005"], "id": "0.42692510339396983-31", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:17,149 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:17,193 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-31/value HTTP/1.1" 200 72
+2019-04-04 16:35:17,193 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:17,193 createcontacts.py[line:107] DEBUG 执行步骤 “输入联系人备注信息” 成功
+2019-04-04 16:35:17,302 createcontacts.py[line:41] INFO 11
+2019-04-04 16:35:17,302 createcontacts.py[line:86] DEBUG clicks('xpath','//span[text() = "确 定"]')
+2019-04-04 16:35:17,302 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u786e \u5b9a\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:17,302 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:17,311 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:17,311 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:17,311 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-32/click {"id": "0.42692510339396983-32", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:17,311 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:17,359 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-32/click HTTP/1.1" 200 72
+2019-04-04 16:35:17,359 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:17,359 createcontacts.py[line:107] DEBUG 执行步骤 “点击确认” 成功
+2019-04-04 16:35:17,525 createcontacts.py[line:41] INFO 12
+2019-04-04 16:35:17,525 createcontacts.py[line:86] DEBUG sleep(u'2')
+2019-04-04 16:35:19,525 createcontacts.py[line:107] DEBUG 执行步骤 “等待2秒” 成功
+2019-04-04 16:35:19,672 createcontacts.py[line:41] INFO 13
+2019-04-04 16:35:19,672 createcontacts.py[line:86] DEBUG assert_string_in_pagesource(u'nvwa@qq.com')
+2019-04-04 16:35:19,672 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:19,672 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:19,690 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 194331
+2019-04-04 16:35:19,693 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:19,693 createcontacts.py[line:107] DEBUG 执行步骤 “断言联系人是否添加成功” 成功
+2019-04-04 16:35:19,854 testsendmailandcreatecontacts.py[line:79] DEBUG 用例 "添加联系人" 执行失败
+2019-04-04 16:35:19,904 testsendmailandcreatecontacts.py[line:173] INFO 共 "3" 条用例，"2" 条需要被执行，成功执行 "1 条"
+2019-04-04 16:35:19,904 testsendmailandcreatecontacts.py[line:38] INFO "2 y"
+2019-04-04 16:35:19,904 testsendmailandcreatecontacts.py[line:44] DEBUG y
+2019-04-04 16:35:19,904 testsendmailandcreatecontacts.py[line:84] INFO ----调用关键字驱动-----
+2019-04-04 16:35:19,904 testsendmailandcreatecontacts.py[line:91] INFO 测试用例一共 19 步
+2019-04-04 16:35:19,905 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[. = \"\u9996\u9875\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:19,905 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:19,921 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:19,921 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:19,921 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-33/click {"id": "0.42692510339396983-33", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:19,921 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:19,968 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-33/click HTTP/1.1" 200 72
+2019-04-04 16:35:19,969 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:19,969 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “点击首页链接” 成功
+2019-04-04 16:35:20,082 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u5199 \u4fe1\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:20,083 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:20,100 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:20,100 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:20,100 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-34/displayed {"id": "0.42692510339396983-34", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:20,100 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:20,131 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-34/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:20,132 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:20,133 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “判断写信按钮是否可见” 成功
+2019-04-04 16:35:20,238 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u5199 \u4fe1\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:20,238 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:20,246 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:20,246 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:20,246 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-34/click {"id": "0.42692510339396983-34", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:20,246 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:20,341 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-34/click HTTP/1.1" 200 72
+2019-04-04 16:35:20,342 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:20,342 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “单机写信按钮” 成功
+2019-04-04 16:35:22,521 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待” 成功
+2019-04-04 16:35:22,686 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[contains(@id,\"_mail_emailinput\")]/input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:22,686 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:23,364 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:23,365 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:23,366 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-35/value {"text": "1311375671@qq.com", "value": ["1", "3", "1", "1", "3", "7", "5", "6", "7", "1", "@", "q", "q", ".", "c", "o", "m"], "id": "0.42692510339396983-35", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:23,367 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:23,577 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-35/value HTTP/1.1" 200 72
+2019-04-04 16:35:23,577 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:23,578 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “输入收件人地址” 成功
+2019-04-04 16:35:23,692 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//div[@aria-label=\"\u90ae\u4ef6\u4e3b\u9898\u8f93\u5165\u6846\uff0c\u8bf7\u8f93\u5165\u90ae\u4ef6\u4e3b\u9898\"]/input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:23,692 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:23,730 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:23,731 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:23,731 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-36/value {"text": "\u6768\u76fc\u53d1\u7684\u65b0\u90ae\u4ef6\uff08\u81ea\u52a8\u5316\u6d4b\u8bd5\uff09", "value": ["\u6768", "\u76fc", "\u53d1", "\u7684", "\u65b0", "\u90ae", "\u4ef6", "\uff08", "\u81ea", "\u52a8", "\u5316", "\u6d4b", "\u8bd5", "\uff09"], "id": "0.42692510339396983-36", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:23,731 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:23,878 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-36/value HTTP/1.1" 200 72
+2019-04-04 16:35:23,879 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:23,879 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “输入邮件主题” 成功
+2019-04-04 16:35:24,023 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//*[contains(@id,\"_attachBrowser\")]/input", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:24,023 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:24,043 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:24,044 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:24,044 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-37/value {"text": "c:\\999.txt", "value": ["c", ":", "\\", "9", "9", "9", ".", "t", "x", "t"], "id": "0.42692510339396983-37", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:24,045 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:24,076 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-37/value HTTP/1.1" 200 72
+2019-04-04 16:35:24,077 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:24,078 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “上传附件至input” 成功
+2019-04-04 16:35:29,202 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待上传完成出现” 成功
+2019-04-04 16:35:29,341 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//span[text() = \"\u4e0a\u4f20\u5b8c\u6210\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,342 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,361 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:29,362 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,362 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-38/displayed {"id": "0.42692510339396983-38", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,362 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,378 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-38/displayed HTTP/1.1" 200 72
+2019-04-04 16:35:29,378 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,378 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “显示等待上传完成” 成功
+2019-04-04 16:35:29,493 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,493 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,513 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 216791
+2019-04-04 16:35:29,517 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,517 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “断言是否上传成功” 成功
+2019-04-04 16:35:29,641 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//iframe[@tabindex=\"1\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,642 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,658 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:29,659 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,659 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/frame {"id": {"ELEMENT": "0.42692510339396983-39", "element-6066-11e4-a52e-4f735466cecf": "0.42692510339396983-39"}, "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,659 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,672 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/frame HTTP/1.1" 200 72
+2019-04-04 16:35:29,672 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,672 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “切换进入iframe” 成功
+2019-04-04 16:35:29,780 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "/html/body", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,781 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,798 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 102
+2019-04-04 16:35:29,798 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,798 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.1358946169270132-1/value {"text": "\u53d1\u7ed9\u81ea\u5df1\u7684\u4e00\u5c01\u4fe1", "value": ["\u53d1", "\u7ed9", "\u81ea", "\u5df1", "\u7684", "\u4e00", "\u5c01", "\u4fe1"], "id": "0.1358946169270132-1", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:29,798 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:29,862 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.1358946169270132-1/value HTTP/1.1" 200 72
+2019-04-04 16:35:29,863 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:29,863 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “输入邮件正文” 成功
+2019-04-04 16:35:30,098 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/frame {"id": null, "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:30,098 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:30,103 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/frame HTTP/1.1" 200 72
+2019-04-04 16:35:30,104 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:30,105 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “退出iframe” 成功
+2019-04-04 16:35:32,315 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待” 成功
+2019-04-04 16:35:32,493 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element {"using": "xpath", "value": "//footer//span[text() = \"\u53d1\u9001\"]", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:32,494 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:32,510 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element HTTP/1.1" 200 104
+2019-04-04 16:35:32,511 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:32,511 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-40/click {"id": "0.42692510339396983-40", "sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:32,511 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:32,576 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "POST /session/5efe2b2d87858394457e06c0d89344aa/element/0.42692510339396983-40/click HTTP/1.1" 200 72
+2019-04-04 16:35:32,577 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:32,577 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “点击发送” 成功
+2019-04-04 16:35:34,745 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “等待” 成功
+2019-04-04 16:35:34,946 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa/source {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:34,947 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:35:36,139 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "GET /session/5efe2b2d87858394457e06c0d89344aa/source HTTP/1.1" 200 221890
+2019-04-04 16:35:36,143 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:35:36,143 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “断言页面是否有发送成功提示” 成功
+2019-04-04 16:35:36,258 remote_connection.py[line:388] DEBUG DELETE http://127.0.0.1:49571/session/5efe2b2d87858394457e06c0d89344aa {"sessionId": "5efe2b2d87858394457e06c0d89344aa"}
+2019-04-04 16:35:36,258 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:36:05,469 connectionpool.py[line:393] DEBUG http://127.0.0.1:49571 "DELETE /session/5efe2b2d87858394457e06c0d89344aa HTTP/1.1" 200 72
+2019-04-04 16:36:05,470 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:36:08,489 testsendmailandcreatecontacts.py[line:144] INFO 执行步骤 “关闭浏览器” 成功
+2019-04-04 16:36:08,647 testsendmailandcreatecontacts.py[line:152] INFO 用例 ’发送邮件‘ 执行通过
+2019-04-04 16:36:08,719 testsendmailandcreatecontacts.py[line:173] INFO 共 "3" 条用例，"3" 条需要被执行，成功执行 "2 条"
+2019-04-04 16:45:04,129 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:45:04,130 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:50535
+2019-04-04 16:45:05,962 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session HTTP/1.1" 200 788
+2019-04-04 16:45:05,963 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:05,964 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/url {"url": "https://www.126.com/", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:05,964 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:07,285 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/url HTTP/1.1" 200 72
+2019-04-04 16:45:07,286 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:07,286 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/source {"sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:07,286 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:08,071 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "GET /session/6e4f2aba946112de64e773c441a11e2f/source HTTP/1.1" 200 18468
+2019-04-04 16:45:08,072 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:08,072 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:08,072 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:08,238 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element HTTP/1.1" 200 101
+2019-04-04 16:45:08,238 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:08,238 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/frame {"id": {"ELEMENT": "0.863986984381462-1", "element-6066-11e4-a52e-4f735466cecf": "0.863986984381462-1"}, "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:08,238 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:08,254 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/frame HTTP/1.1" 200 72
+2019-04-04 16:45:08,255 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,255 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,256 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,306 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element HTTP/1.1" 200 103
+2019-04-04 16:45:10,307 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,307 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.04505893430246477-1", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,307 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,381 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-1/value HTTP/1.1" 200 72
+2019-04-04 16:45:10,382 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,382 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,382 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,400 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element HTTP/1.1" 200 103
+2019-04-04 16:45:10,400 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,401 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.04505893430246477-2", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,401 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,446 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-2/value HTTP/1.1" 200 72
+2019-04-04 16:45:10,446 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,446 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element {"using": "id", "value": "dologin", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,447 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,462 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element HTTP/1.1" 200 103
+2019-04-04 16:45:10,463 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:10,463 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-3/click {"id": "0.04505893430246477-3", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:10,463 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:10,546 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element/0.04505893430246477-3/click HTTP/1.1" 200 72
+2019-04-04 16:45:10,546 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:13,546 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element {"using": "id", "value": "spnUid", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:13,546 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:14,297 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "POST /session/6e4f2aba946112de64e773c441a11e2f/element HTTP/1.1" 200 102
+2019-04-04 16:45:14,298 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:14,298 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element/0.6556806639010431-1/text {"id": "0.6556806639010431-1", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:14,298 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:14,322 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "GET /session/6e4f2aba946112de64e773c441a11e2f/element/0.6556806639010431-1/text HTTP/1.1" 200 90
+2019-04-04 16:45:14,322 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:45:14,322 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50535/session/6e4f2aba946112de64e773c441a11e2f/element/0.6556806639010431-1/text {"id": "0.6556806639010431-1", "sessionId": "6e4f2aba946112de64e773c441a11e2f"}
+2019-04-04 16:45:14,323 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:45:14,330 connectionpool.py[line:393] DEBUG http://127.0.0.1:50535 "GET /session/6e4f2aba946112de64e773c441a11e2f/element/0.6556806639010431-1/text HTTP/1.1" 200 90
+2019-04-04 16:45:14,330 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:33,776 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:47:33,777 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:50806
+2019-04-04 16:47:35,682 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session HTTP/1.1" 200 786
+2019-04-04 16:47:35,682 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:35,682 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/url {"url": "https://www.126.com/", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:35,683 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:37,035 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/url HTTP/1.1" 200 72
+2019-04-04 16:47:37,035 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:37,035 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/source {"sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:37,035 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:37,739 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "GET /session/9f06071382c3383443c819e68aab6a34/source HTTP/1.1" 200 18471
+2019-04-04 16:47:37,740 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:37,740 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:37,741 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:37,874 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element HTTP/1.1" 200 104
+2019-04-04 16:47:37,874 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:37,875 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/frame {"id": {"ELEMENT": "0.040116542763238394-1", "element-6066-11e4-a52e-4f735466cecf": "0.040116542763238394-1"}, "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:37,875 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:37,883 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/frame HTTP/1.1" 200 72
+2019-04-04 16:47:37,883 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:39,883 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:39,884 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:39,943 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element HTTP/1.1" 200 103
+2019-04-04 16:47:39,943 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:39,943 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.07851332806469791-1", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:39,944 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:40,009 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-1/value HTTP/1.1" 200 72
+2019-04-04 16:47:40,010 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:40,010 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:40,010 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:40,025 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element HTTP/1.1" 200 103
+2019-04-04 16:47:40,025 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:40,025 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.07851332806469791-2", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:40,026 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:40,072 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-2/value HTTP/1.1" 200 72
+2019-04-04 16:47:40,072 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:40,072 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element {"using": "id", "value": "dologin", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:40,072 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:40,088 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element HTTP/1.1" 200 103
+2019-04-04 16:47:40,088 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:40,089 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-3/click {"id": "0.07851332806469791-3", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:40,089 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:40,182 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element/0.07851332806469791-3/click HTTP/1.1" 200 72
+2019-04-04 16:47:40,182 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:43,182 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element {"using": "id", "value": "spnUid", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:43,182 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:45,261 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "POST /session/9f06071382c3383443c819e68aab6a34/element HTTP/1.1" 200 102
+2019-04-04 16:47:45,261 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:45,261 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element/0.4625497407520849-1/text {"id": "0.4625497407520849-1", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:45,261 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:45,278 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "GET /session/9f06071382c3383443c819e68aab6a34/element/0.4625497407520849-1/text HTTP/1.1" 200 90
+2019-04-04 16:47:45,278 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:47:45,279 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:50806/session/9f06071382c3383443c819e68aab6a34/element/0.4625497407520849-1/text {"id": "0.4625497407520849-1", "sessionId": "9f06071382c3383443c819e68aab6a34"}
+2019-04-04 16:47:45,279 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:47:45,286 connectionpool.py[line:393] DEBUG http://127.0.0.1:50806 "GET /session/9f06071382c3383443c819e68aab6a34/element/0.4625497407520849-1/text HTTP/1.1" 200 90
+2019-04-04 16:47:45,286 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:22,588 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:50:22,589 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:51133
+2019-04-04 16:50:24,429 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session HTTP/1.1" 200 788
+2019-04-04 16:50:24,430 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:24,430 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/url {"url": "https://www.126.com/", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:24,430 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:26,261 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/url HTTP/1.1" 200 72
+2019-04-04 16:50:26,261 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:26,261 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/source {"sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:26,262 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:27,035 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "GET /session/dff64d84fcb5e3f305e27acb5160397c/source HTTP/1.1" 200 18461
+2019-04-04 16:50:27,036 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:27,037 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:27,037 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:27,174 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element HTTP/1.1" 200 103
+2019-04-04 16:50:27,174 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:27,174 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/frame {"id": {"ELEMENT": "0.45858734159451053-1", "element-6066-11e4-a52e-4f735466cecf": "0.45858734159451053-1"}, "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:27,175 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:27,183 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/frame HTTP/1.1" 200 72
+2019-04-04 16:50:27,183 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,184 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,185 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,234 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element HTTP/1.1" 200 102
+2019-04-04 16:50:29,235 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,235 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.5281164832445737-1", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,235 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,339 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-1/value HTTP/1.1" 200 72
+2019-04-04 16:50:29,340 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,340 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,341 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,364 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element HTTP/1.1" 200 102
+2019-04-04 16:50:29,365 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,365 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.5281164832445737-2", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,365 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,435 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-2/value HTTP/1.1" 200 72
+2019-04-04 16:50:29,436 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,437 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element {"using": "id", "value": "dologin", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,437 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,461 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element HTTP/1.1" 200 102
+2019-04-04 16:50:29,461 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:29,461 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-3/click {"id": "0.5281164832445737-3", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:29,462 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:29,582 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element/0.5281164832445737-3/click HTTP/1.1" 200 72
+2019-04-04 16:50:29,582 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:32,583 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element {"using": "id", "value": "spnUid", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:32,583 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:36,531 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "POST /session/dff64d84fcb5e3f305e27acb5160397c/element HTTP/1.1" 200 103
+2019-04-04 16:50:36,531 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:36,532 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element/0.12154496037222118-1/text {"id": "0.12154496037222118-1", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:36,532 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:36,569 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "GET /session/dff64d84fcb5e3f305e27acb5160397c/element/0.12154496037222118-1/text HTTP/1.1" 200 90
+2019-04-04 16:50:36,570 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:50:36,570 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51133/session/dff64d84fcb5e3f305e27acb5160397c/element/0.12154496037222118-1/text {"id": "0.12154496037222118-1", "sessionId": "dff64d84fcb5e3f305e27acb5160397c"}
+2019-04-04 16:50:36,570 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:50:36,582 connectionpool.py[line:393] DEBUG http://127.0.0.1:51133 "GET /session/dff64d84fcb5e3f305e27acb5160397c/element/0.12154496037222118-1/text HTTP/1.1" 200 90
+2019-04-04 16:50:36,583 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:10,622 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:52:10,623 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:51402
+2019-04-04 16:52:12,461 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session HTTP/1.1" 200 787
+2019-04-04 16:52:12,462 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:12,462 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/url {"url": "https://www.126.com/", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:12,463 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:13,609 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/url HTTP/1.1" 200 72
+2019-04-04 16:52:13,610 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:13,611 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/source {"sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:13,611 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:14,461 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "GET /session/98befb0a6776d4b25943fae8ec2cb795/source HTTP/1.1" 200 18476
+2019-04-04 16:52:14,462 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:14,462 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:14,462 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:14,489 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element HTTP/1.1" 200 103
+2019-04-04 16:52:14,490 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:14,490 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/frame {"id": {"ELEMENT": "0.23069268070167892-1", "element-6066-11e4-a52e-4f735466cecf": "0.23069268070167892-1"}, "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:14,490 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:14,500 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/frame HTTP/1.1" 200 72
+2019-04-04 16:52:14,501 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,501 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,502 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,549 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element HTTP/1.1" 200 101
+2019-04-04 16:52:16,550 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,550 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.209152890610651-1", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,550 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,624 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-1/value HTTP/1.1" 200 72
+2019-04-04 16:52:16,624 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,624 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,625 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,640 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element HTTP/1.1" 200 101
+2019-04-04 16:52:16,640 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,640 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.209152890610651-2", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,640 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,687 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-2/value HTTP/1.1" 200 72
+2019-04-04 16:52:16,688 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,688 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element {"using": "id", "value": "dologin", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,688 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,703 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element HTTP/1.1" 200 101
+2019-04-04 16:52:16,704 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:16,704 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51402/session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-3/click {"id": "0.209152890610651-3", "sessionId": "98befb0a6776d4b25943fae8ec2cb795"}
+2019-04-04 16:52:16,704 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:16,785 connectionpool.py[line:393] DEBUG http://127.0.0.1:51402 "POST /session/98befb0a6776d4b25943fae8ec2cb795/element/0.209152890610651-3/click HTTP/1.1" 200 1154
+2019-04-04 16:52:16,785 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:34,195 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:52:34,196 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:51485
+2019-04-04 16:52:36,016 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session HTTP/1.1" 200 788
+2019-04-04 16:52:36,017 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:36,018 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/url {"url": "https://www.126.com/", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:36,018 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:37,172 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/url HTTP/1.1" 200 72
+2019-04-04 16:52:37,173 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:37,174 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/source {"sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:37,174 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:37,856 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "GET /session/e99d978cdd116ab6f063f7594ea8e780/source HTTP/1.1" 200 18468
+2019-04-04 16:52:37,857 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:37,858 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:37,858 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:38,001 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element HTTP/1.1" 200 102
+2019-04-04 16:52:38,002 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:38,002 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/frame {"id": {"ELEMENT": "0.5977215007973309-1", "element-6066-11e4-a52e-4f735466cecf": "0.5977215007973309-1"}, "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:38,002 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:38,010 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/frame HTTP/1.1" 200 72
+2019-04-04 16:52:38,010 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,010 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,010 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,056 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element HTTP/1.1" 200 102
+2019-04-04 16:52:40,057 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,057 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.5952792708576409-1", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,058 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,135 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-1/value HTTP/1.1" 200 72
+2019-04-04 16:52:40,135 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,136 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,136 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,151 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element HTTP/1.1" 200 102
+2019-04-04 16:52:40,151 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,152 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.5952792708576409-2", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,152 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,196 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-2/value HTTP/1.1" 200 72
+2019-04-04 16:52:40,197 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,197 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element {"using": "id", "value": "dologin", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,197 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,213 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element HTTP/1.1" 200 102
+2019-04-04 16:52:40,213 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:40,213 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-3/click {"id": "0.5952792708576409-3", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:40,214 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:40,293 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element/0.5952792708576409-3/click HTTP/1.1" 200 72
+2019-04-04 16:52:40,294 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:43,294 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element {"using": "id", "value": "spnUid", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:43,294 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:43,945 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "POST /session/e99d978cdd116ab6f063f7594ea8e780/element HTTP/1.1" 200 102
+2019-04-04 16:52:43,946 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:43,946 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/source {"sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:43,947 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:43,965 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "GET /session/e99d978cdd116ab6f063f7594ea8e780/source HTTP/1.1" 200 128112
+2019-04-04 16:52:43,969 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:52:43,970 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51485/session/e99d978cdd116ab6f063f7594ea8e780/element/0.7501955323106437-1/text {"id": "0.7501955323106437-1", "sessionId": "e99d978cdd116ab6f063f7594ea8e780"}
+2019-04-04 16:52:43,970 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:52:43,990 connectionpool.py[line:393] DEBUG http://127.0.0.1:51485 "GET /session/e99d978cdd116ab6f063f7594ea8e780/element/0.7501955323106437-1/text HTTP/1.1" 200 90
+2019-04-04 16:52:43,990 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:54:00,751 testsendmailandcreatecontacts.py[line:38] INFO "0 y"
+2019-04-04 16:54:00,752 testsendmailandcreatecontacts.py[line:44] DEBUG y
+2019-04-04 16:54:00,752 testsendmailandcreatecontacts.py[line:84] INFO ----调用关键字驱动-----
+2019-04-04 16:54:00,752 testsendmailandcreatecontacts.py[line:91] INFO 测试用例一共 13 步
+2019-04-04 16:54:03,809 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:51701/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 16:54:03,810 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:51701
+2019-04-04 16:54:05,897 connectionpool.py[line:393] DEBUG http://127.0.0.1:51701 "POST /session HTTP/1.1" 200 788
+2019-04-04 16:54:05,898 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:54:05,913 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:51701/session/b75f1fc1b46e44d6d9a12401dfe832b4/screenshot {"sessionId": "b75f1fc1b46e44d6d9a12401dfe832b4"}
+2019-04-04 16:54:05,914 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 16:54:06,032 connectionpool.py[line:393] DEBUG http://127.0.0.1:51701 "GET /session/b75f1fc1b46e44d6d9a12401dfe832b4/screenshot HTTP/1.1" 200 288
+2019-04-04 16:54:06,033 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 16:54:06,033 testsendmailandcreatecontacts.py[line:178] WARNING Message: unknown error: cannot activate web view
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64)
+
+2019-04-04 17:03:19,850 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52449/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 17:03:19,851 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:52449
+2019-04-04 17:03:21,661 connectionpool.py[line:393] DEBUG http://127.0.0.1:52449 "POST /session HTTP/1.1" 200 788
+2019-04-04 17:03:21,662 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:03:21,662 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52449/session/283aa755ac415e49eb13ae0ea7fc6064/url {"url": "https://www.126.com/", "sessionId": "283aa755ac415e49eb13ae0ea7fc6064"}
+2019-04-04 17:03:21,662 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:03:23,895 connectionpool.py[line:393] DEBUG http://127.0.0.1:52449 "POST /session/283aa755ac415e49eb13ae0ea7fc6064/url HTTP/1.1" 200 72
+2019-04-04 17:03:23,895 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:10,978 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 17:08:10,979 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:52801
+2019-04-04 17:08:12,796 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session HTTP/1.1" 200 788
+2019-04-04 17:08:12,797 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:12,797 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/url {"url": "https://www.126.com/", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:12,798 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:15,728 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/url HTTP/1.1" 200 72
+2019-04-04 17:08:15,728 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:15,728 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/source {"sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:15,728 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:15,734 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "GET /session/83adbe0990b5cdd75117735ec4b77e20/source HTTP/1.1" 200 20122
+2019-04-04 17:08:15,735 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:15,735 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:15,736 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:15,756 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element HTTP/1.1" 200 102
+2019-04-04 17:08:15,756 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:15,756 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/frame {"id": {"ELEMENT": "0.9896537776112408-1", "element-6066-11e4-a52e-4f735466cecf": "0.9896537776112408-1"}, "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:15,757 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:15,765 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/frame HTTP/1.1" 200 72
+2019-04-04 17:08:15,766 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:17,766 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:17,766 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:17,784 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element HTTP/1.1" 200 102
+2019-04-04 17:08:17,784 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:17,785 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.6006944244599592-1", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:17,785 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:17,907 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-1/value HTTP/1.1" 200 72
+2019-04-04 17:08:17,908 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:17,908 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:17,908 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:17,931 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element HTTP/1.1" 200 102
+2019-04-04 17:08:17,931 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:17,931 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.6006944244599592-2", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:17,931 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:17,982 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-2/value HTTP/1.1" 200 72
+2019-04-04 17:08:17,982 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:17,983 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element {"using": "id", "value": "dologin", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:17,983 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:18,005 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element HTTP/1.1" 200 102
+2019-04-04 17:08:18,005 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:18,005 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-3/click {"id": "0.6006944244599592-3", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:18,005 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:18,096 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element/0.6006944244599592-3/click HTTP/1.1" 200 72
+2019-04-04 17:08:18,096 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:21,097 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element {"using": "id", "value": "spnUid", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:21,097 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:22,929 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "POST /session/83adbe0990b5cdd75117735ec4b77e20/element HTTP/1.1" 200 103
+2019-04-04 17:08:22,930 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:22,930 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/source {"sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:22,930 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:22,944 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "GET /session/83adbe0990b5cdd75117735ec4b77e20/source HTTP/1.1" 200 126242
+2019-04-04 17:08:22,946 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:22,946 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52801/session/83adbe0990b5cdd75117735ec4b77e20/element/0.07696128189976692-1/text {"id": "0.07696128189976692-1", "sessionId": "83adbe0990b5cdd75117735ec4b77e20"}
+2019-04-04 17:08:22,947 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:22,966 connectionpool.py[line:393] DEBUG http://127.0.0.1:52801 "GET /session/83adbe0990b5cdd75117735ec4b77e20/element/0.07696128189976692-1/text HTTP/1.1" 200 90
+2019-04-04 17:08:22,967 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:51,845 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "platformName": "any", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "version": "", "platform": "ANY", "goog:chromeOptions": {"excludeSwitches": ["ignores - certificate - errors"], "extensions": [], "args": []}}}
+2019-04-04 17:08:51,846 connectionpool.py[line:205] DEBUG Starting new HTTP connection (1): 127.0.0.1:52959
+2019-04-04 17:08:54,075 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session HTTP/1.1" 200 787
+2019-04-04 17:08:54,075 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:54,076 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/url {"url": "https://www.126.com/", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:54,077 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:55,499 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/url HTTP/1.1" 200 72
+2019-04-04 17:08:55,500 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:55,500 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/source {"sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:55,501 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:56,179 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "GET /session/7615a1085e6583d494cfb0cb3c382e78/source HTTP/1.1" 200 18468
+2019-04-04 17:08:56,180 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:56,181 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element {"using": "xpath", "value": "//*[@id = \"loginDiv\"]/iframe", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:56,181 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:56,332 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element HTTP/1.1" 200 102
+2019-04-04 17:08:56,332 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:56,332 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/frame {"id": {"ELEMENT": "0.3331857201811683-1", "element-6066-11e4-a52e-4f735466cecf": "0.3331857201811683-1"}, "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:56,333 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:56,344 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/frame HTTP/1.1" 200 72
+2019-04-04 17:08:56,345 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,345 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element {"using": "xpath", "value": "//input[@name = \"email\"]", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,345 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,362 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element HTTP/1.1" 200 102
+2019-04-04 17:08:58,362 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,363 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-1/value {"text": "yp1311375671", "value": ["y", "p", "1", "3", "1", "1", "3", "7", "5", "6", "7", "1"], "id": "0.3995378360697692-1", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,363 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,427 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-1/value HTTP/1.1" 200 72
+2019-04-04 17:08:58,428 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,428 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element {"using": "xpath", "value": "//input[@name = \"password\"]", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,428 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,443 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element HTTP/1.1" 200 102
+2019-04-04 17:08:58,443 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,443 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-2/value {"text": "19930724", "value": ["1", "9", "9", "3", "0", "7", "2", "4"], "id": "0.3995378360697692-2", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,444 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,494 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-2/value HTTP/1.1" 200 72
+2019-04-04 17:08:58,494 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,495 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element {"using": "id", "value": "dologin", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,495 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,509 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element HTTP/1.1" 200 102
+2019-04-04 17:08:58,509 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:08:58,509 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-3/click {"id": "0.3995378360697692-3", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:08:58,510 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:08:58,590 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element/0.3995378360697692-3/click HTTP/1.1" 200 72
+2019-04-04 17:08:58,591 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:09:01,591 remote_connection.py[line:388] DEBUG POST http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element {"using": "id", "value": "spnUid", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:09:01,591 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:09:02,288 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "POST /session/7615a1085e6583d494cfb0cb3c382e78/element HTTP/1.1" 200 102
+2019-04-04 17:09:02,289 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:09:02,289 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/source {"sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:09:02,289 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:09:02,303 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "GET /session/7615a1085e6583d494cfb0cb3c382e78/source HTTP/1.1" 200 155893
+2019-04-04 17:09:02,305 remote_connection.py[line:440] DEBUG Finished Request
+2019-04-04 17:09:02,305 remote_connection.py[line:388] DEBUG GET http://127.0.0.1:52959/session/7615a1085e6583d494cfb0cb3c382e78/element/0.7865057124804637-1/text {"id": "0.7865057124804637-1", "sessionId": "7615a1085e6583d494cfb0cb3c382e78"}
+2019-04-04 17:09:02,305 connectionpool.py[line:240] DEBUG Resetting dropped connection: 127.0.0.1
+2019-04-04 17:09:02,321 connectionpool.py[line:393] DEBUG http://127.0.0.1:52959 "GET /session/7615a1085e6583d494cfb0cb3c382e78/element/0.7865057124804637-1/text HTTP/1.1" 200 90
+2019-04-04 17:09:02,321 remote_connection.py[line:440] DEBUG Finished Request
