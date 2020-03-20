@@ -7,13 +7,13 @@ import traceback
 from DataDrivenFrameWork.config.varconfig import mylog
 #用例结束后，想Excel写入执行结果信息
 def writetestresult(sheetobj,rowno,colsno,testresult,errorinfo= None,picpath= None):
-    mylog.debug(sheetobj,rowno,colsno,testresult,errorinfo,picpath)
+    print(sheetobj,rowno,colsno,testresult,errorinfo,picpath)
     #测试通过绿色，失败红色
     colordic = {'pass':'green','faild':'red','':None}
     #对应执行时间和执行 结果，因为测试用例和用例步骤表中国都有执
     # 行时间和直接结果一列，定义此字典对象是为了区分应该写入哪个工作表
     colsdict= {
-        'testcase':[testcase_runtime,testcase_testresult],
+        'testdata':[testcase_runtime,testcase_testresult],
         'casestep':[teststep_runtime,teststep_testresult],
         'datasheet':[datasource_runtime,datasource_result]
     }
@@ -46,7 +46,7 @@ def writetestresult(sheetobj,rowno,colsno,testresult,errorinfo= None,picpath= No
                 excelobj.writecell(sheetobj,content='',rowno=rowno,colsno=teststep_errorpic)
 
     except Exception as e:
-        mylog.error(e,u'写入Excel时发生异常')
+        print(e,u'写入Excel时发生异常')
         print(traceback.print_exc())
 
 

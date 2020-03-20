@@ -7,7 +7,7 @@ import traceback
 from DataDrivenFrameWork.config.varconfig import mylog
 
 def datadriverfun(datasourcesheetobj,stepsheetobj):
-    mylog.info(datasourcesheetobj,stepsheetobj)
+    print(datasourcesheetobj,stepsheetobj)
     try:
         #获取数据源表中的是否执行列对象,第六行‘是否执行’
         dataisexecutecolumn = excelobj.getColumn(
@@ -27,18 +27,18 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
         requiredatas = 0
         #从dataisexecutecolumn第二个参数开始
         for idx,data in enumerate(dataisexecutecolumn[1:]):
-            mylog.info("%s %s" % (idx,data))
+            print("%s %s" % (idx,data))
             #遍历数据源表，准备进行数据驱动测试
             #因为第一行是标题行，所以从第二行开始遍历
             # 如果该列为y，执行
             if data =='y':
                 #每遍历一次，行+1
-                mylog.info(u"开始添加联系人 '%s'" % emailcolumn[idx + 1])
+                print(u"开始添加联系人 '%s'" % emailcolumn[idx + 1])
                 requiredatas += 1
                 #定义记录执行成功步骤变数量
                 successstep = 0
                 for index in range(2,setprownums + 1):
-                    mylog.info(index)
+                    print(index)
 
                     #遍历添加联系人步骤表中所有的关键字数据
                     rowobj = excelobj.getrow(stepsheetobj,index)
@@ -83,14 +83,14 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                         tmpstr += \
                             "u'" + operatevalue + "'" if operatevalue else ''
                     runstr = keyword + '(' + tmpstr + ')'
-                    mylog.debug(runstr)
+                    print(runstr)
                     try:
                         #     #通过eval函数，讲拼接的页面动作函数调用的字符串表示
                         #     #当成有效的Python表达式执行，从而执行测试步骤的sheet中
                         #     #关键字在ageaction.py文件中对应的映射方法,来完成页面元素的操作
                         eval(runstr)
                     except Exception as e:
-                        mylog.debug(u'执行步骤 “%s” 发生异常'\
+                        print(u'执行步骤 “%s” 发生异常'\
                               % rowobj[teststep_teststepdescribe-1],e)
                         # 截取异常屏幕图片
                         capturepic = capture_screen()
@@ -103,13 +103,13 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                                         picpath=capturepic)
                     else:
                         successstep +=1
-                        mylog.debug(u'执行步骤 “%s” 成功' \
+                        print(u'执行步骤 “%s” 成功' \
                               %rowobj[teststep_teststepdescribe-1])
                         writetestresult(sheetobj=stepsheetobj,
                                         rowno=index, colsno='casestep',
                                         testresult='pass')
                 # 如果执行步骤数=当前执行数
-                mylog.info(setprownums,'setprownums数量','-----',successstep+1,'successstep数量')
+                print(setprownums,'setprownums数量','-----',successstep+1,'successstep数量')
                 if setprownums == successstep+1:
 
                     #执行成功数+1

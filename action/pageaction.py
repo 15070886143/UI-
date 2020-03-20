@@ -13,9 +13,13 @@ from DataDrivenFrameWork.util.clipboardtuil import clipboard
 from DataDrivenFrameWork.util.keyboardutil import keyboardkeys
 from DataDrivenFrameWork.util.dirandtime import *
 from selenium.webdriver.chrome.options import Options
+import traceback
 import time
 import unittest
-
+import random
+import pytesseract
+from PIL import Image
+from PIL import ImageGrab
 #定义全局driver变量
 driver = None
 #定义全局等待类实例对象
@@ -82,6 +86,7 @@ def clear(locationtype,locatorexpression,*args):
         raise e
 
 #在页面输入框输入数据
+#参数：1：定位方式，2：定位属性值，3：要输入的值
 def input_srting(locationtype,locatorexpression,inputcontent):
     global driver
     try:
@@ -102,7 +107,7 @@ def getelemen(locatetype,locatorexpression):
         raise e
 
 
-#单机页面元素
+#获取多个页面元素对象
 def getelemens(locationtype,locatorexpression):
     global driver
     try:
@@ -125,65 +130,6 @@ def addclick(locationtype,*args):
         locationtype.click()
     except Exception as e:
         raise e
-
-#断言页面元素是否存在某关键字或者关键字符串
-def assert_string_in_pagesource(assertstring,*args):
-    global driver
-    try:
-        #断言页面元素是否在页面显示，如果不存在，抛出格式化后的信息%s格式化字符串，否则抛出异常
-        assert assertstring in driver.page_source,\
-        u'%s not found in page source!' % assertstring
-        print(u'断言成功')
-    except AssertionError as e:
-        print(u'断言失败')
-        raise AssertionError(e)
-    except Exception as e:
-        print(u'断言失败')
-        raise e
-
-
-# class assert_page_check(unittest.TestCase):
-#     def test_assert_string_in_pagesource(self,assertstring):
-#         global driver
-#         try:
-#             # 断言页面元素是否在页面显示，如果不存在，抛出格式化后的信息%s格式化字符串，否则抛出异常
-#             self.assertIn(assertstring,driver.page_source),\
-#                 u'%s not found in page source!' % assertstring
-#             print(u'断言成功')
-#         except AssertionError as e:
-#             print(u'断言失败')
-#             raise AssertionError(e)
-#         except Exception as e:
-#             print(u'断言失败')
-#             raise e
-
-#断言页面标题是否存在给定的关键字符串
-def assert_title(titlestr,*args):
-    global driver
-    try:
-        #断言页面的标题是否与预期一致
-        assert titlestr in driver.title, \
-        u'%s not found in title!' % titlestr
-        print(u'断言成功')
-    except AssertionError as e:
-        print(u'断言失败')
-        raise AssertionError(e)
-    except Exception as e:
-        print(u'断言失败')
-        raise e
-
-def assert_pagesour(titlestr,*args):
-    global driver
-    try:
-        #断言页面的标题是否与预期一致
-        page = driver.page_source
-        return page
-    except AssertionError as e:
-        print(u'断言失败')
-        raise AssertionError(e)
-    except Exception as e:
-        print(u'断言失败')
-        raise e
 #获取页面标题
 def title(*args):
     global driver
@@ -191,8 +137,15 @@ def title(*args):
         return driver.title
     except Exception as e:
         raise e
-
-#获取页面远吗
+#获取属性值
+def attribute(locationtype,locatorexpression,assging):
+    global driver
+    try:
+        assert_attrbute = str(locationtype.get_attribute(locatorexpression))
+        return assert_attrbute
+    except Exception as e:
+        raise e
+#获取页面源代码
 def getpagesource(*args):
     global driver
     try:
@@ -201,6 +154,7 @@ def getpagesource(*args):
         raise  e
 
 #切换进入frame
+#参数一：定位方式，二定位属性值
 def switch_to_frame(locationtype,framelocatorexpression,*args):
     global driver
     try:
@@ -274,7 +228,46 @@ def capture_screen(*args):
         raise e
     else:
         return picnameandcpath
-
+#单独截图
+def quanping_jietu(*args):
+    global driver
+    #存放地址
+    image = parentdifpath + '\\image\\'+'jietu.png'
+    try:
+        #开始截图
+        driver.get_screenshot_as_file(image)
+        print('全屏截图成功')
+    except Exception as e:
+        raise e
+#指定元素进行截图，保存
+def zidingyi_jietu(locatetype,locatorexpression,*args):
+    try:
+        element =waitUtil.visibilityofelementlocated(locatetype,locatorexpression)
+        # 获取验证码坐标
+        locations = element.location
+        # 获取大小
+        sizes = element.size
+        print('元素坐标和大小%s %s' % (locations,sizes))
+        #先截取全图
+        quanping_jietu()
+        #获取元素横坐标
+        left = element.location['x']
+        #获取元素纵坐标
+        top = element.location['y']
+        #获取横坐标+宽度=左边到右边的宽度坐标
+        right = element.location['x'] + element.size['width']
+        # 获取纵坐标+高度=上边到下边边的高度坐标
+        bottom = element.location['y'] + element.size['height']
+        #合并成元祖
+        boxx = (left, top, right, bottom)
+        #打开截图图片
+        im = Image.open(u'../image/jietu.png')
+        #crop裁剪方法，对合并的坐标进行截图，并保存
+        im = im.crop(boxx)
+        im.save(u'../image/jietu.png')
+        print('指定区域截图成功')
+    except Exception as e:
+        raise e
 def waitpresenceofelementlocated(locationtype,locatorexpression,*args):
     '''
         显示等待页面元素的出现，但不一定可见，存在返回页面元素对象
@@ -284,6 +277,7 @@ def waitpresenceofelementlocated(locationtype,locatorexpression,*args):
     except Exception as e:
         raise e
 
+#参数一：定位方式，二定位属性值
 def waitframetobeavailableandswitchtolt(locationtype,locatorexpression,*args):
     '''
         检查frame是否 存在，存在则切换进入frame控件中
@@ -302,6 +296,123 @@ def waitvisibilityofelementlocated(locationtype,locatorexpression,*args):
     except Exception as e:
         raise  e
 
+##随机生成手机号码
+def phoneNORandomGenerator():
+    prelist=["130","131","132","133","134","135","136","137","138",
+             "139","147","150","151","152","153","155","156","157",
+             "158","159","186","187","188"]
+    #随机生成开头三位+随机遍历8个0到9的数字
+    phone= random.choice(prelist)+"".join(random.choice("0123456789") for i in range(8))
+    return phone
+#刷新页面方法
+def refresh():
+    global driver
+    try:
+        driver.refresh()
+        print('刷新页面成功')
+    except Exception as e:
+        raise e
 
-if __name__ == '__main__':
-    capture_screen()
+#页面前进
+def forward():
+    global driver
+    try:
+        driver.forward()
+    except Exception as e:
+        raise  e
+#页面后退
+def back():
+    global driver
+    try:
+        driver.back()
+    except Exception as e:
+        raise  e
+#退出浏览器
+def quit():
+    global driver
+    try:
+        driver.quit()
+        print('退出浏览器成功')
+    except Exception as e:
+        print(u'退出浏览器异常')
+        traceback.print_exc()
+#清除浏览器缓存
+def de_cookies():
+    global driver
+    try:
+        #获取浏览器的cookies
+        cookies = driver.get_cookies()
+        print("main: cookies = {cookies}")
+        #开始清除
+        driver.delete_all_cookies()
+    except Exception as e:
+        raise e
+
+#断言页面属性值是否存在
+#第一个参数页面对象，第二个页面属性
+def assert_attribute(locationtype,locatorexpression):
+    global driver
+    #从对象中获取该属性值
+    assert_attrbute = str(locationtype.get_attribute(locatorexpression))
+    #从该对象获取HTML源代码
+    attrbutehtml = str(locationtype.get_attribute('outerHTML'))
+    try:
+        #检查属性值是否在该源代码中
+        assert assert_attrbute in attrbutehtml
+        print('断言成功，页面存在该元素，页面返回元素和属性值 [0%s="%s"]' % (locatorexpression,assert_attrbute))
+    except Exception as e:
+
+        print('断言失败，页面不存在该元素，期望结果:%s，实际结果:%s，请进入浏览器打开F12进行定位！' % (locatorexpression,assert_attrbute))
+
+
+#获取整个文档的HTML对象，比page_source要好
+#第一个参数获取指定的对象，第二个获取要检查的值也就是断言该值是否出现在页面
+def assert_get_html(locationtype,assertstring):
+    global driver
+    try:
+        #获取dom对象下所有元素和标签
+        html = getelement(driver,'xpath','//*')
+        #获取所有HTML源文件
+        html_attr = str(html.get_attribute('outerHTML'))
+        #获取该对象的HTML源代码
+        attrbutehtml = str(locationtype.get_attribute('outerHTML'))
+        #检查传入的参数是否在页面中
+        assert assertstring in html_attr
+        print('断言成功，页面源代码包含元素：%s,可在该代码中查看：%s' % (assertstring,attrbutehtml))
+    except Exception as e:
+        print(u'断言失败，页面源代码不存在 “%s” 元素，请手动检查页面！' % assertstring,e)
+
+
+
+
+#断言页面元素是否存在某关键字或者关键字符串
+def assert_string_in_pagesource(assertstring,*args):
+    global driver
+    try:
+        #断言页面元素是否在页面显示，如果不存在，抛出格式化后的信息%s格式化字符串，否则抛出异常
+        assert assertstring in driver.page_source,\
+        u'%s not found in page source!' % assertstring
+        print(u'断言成功')
+    except AssertionError as e:
+        print(u'断言失败')
+        raise AssertionError(e)
+    except Exception as e:
+        print(u'断言失败')
+        raise e
+
+#断言页面标题是否存在给定的关键字符串
+def assert_title(titlestr,*args):
+    global driver
+    try:
+        #断言页面的标题是否与预期一致
+        assert titlestr in driver.title, \
+        u'%s not found in title!' % titlestr
+        print(u'断言成功')
+    except AssertionError as e:
+        print(u'断言失败')
+        raise AssertionError(e)
+    except Exception as e:
+        print(u'断言失败')
+        raise e
+# if __name__ == '__main__':
+#     capture_screen()

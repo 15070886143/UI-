@@ -22,12 +22,14 @@ class waitutil(object):
         }
         #初始化driver对象
         self.driver = driver
-        #创建显示等待实例对象
+        #创建显示等待实例对象，每10秒检查一次
         self.wait = WebDriverWait(self.driver,10)
     def presenceofelementlocated(self,locatormethod,locatorexpression):
         '显示等待页面元素出现在DOM中，单不一定可见，存在则返回该页面元素对象'
         try:
+            #调用until方法，判断是否返回为真
             element = self.wait.until(
+                #显示等待方法，根据传入的定位方式和值，查找页面元素至少一个出现，为真返回数据，否则异常
                 EC.presence_of_element_located((self.locationtypeDict[locatormethod.lower()],locatorexpression)))
             return element
         except Exception as e:
@@ -44,6 +46,7 @@ class waitutil(object):
     def visibilityofelementlocated(self,locationtype,locatorexpression):
         '显示等待页面元素出现在DOM中，并且可见，存在返回页面对象'
         try:
+            # 显示等待方法，根据传入的定位方式和值，查找页面元素是否出现，为真返回数据，否则异常
             element = self.wait.until(
                 EC.visibility_of_element_located((
                     self.locationtypeDict[locationtype.lower()],locatorexpression)))

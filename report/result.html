@@ -463,9 +463,9 @@
         
     <div class='page-header'>
         <h1 id="title">自动化测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2019-04-04 16:58:22</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:00.002000</p>
-<p class='attribute'><strong>测试结果:</strong> 错误 2</p>
+    <p class='attribute'><strong>开始时间:</strong> 2019-05-06 18:35:29</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:59.588000</p>
+<p class='attribute'><strong>测试结果:</strong> 通过 2 错误 1</p>
 
     </div>
     <!--<div style="float: left;width:50%;"><p class='description'>详细测试用例结果</p></div>-->
@@ -479,11 +479,11 @@
         
     <div id="btn-group">
     <div class="btn-group btn-group-sm">
-        <a class="btn btn-primary" onclick='javascript:showCase(0)'>概要{ 0.00% }</a>
-        <a class="btn btn-warning" onclick='javascript:showCase(4)'>错误{ 2 }</a>
+        <a class="btn btn-primary" onclick='javascript:showCase(0)'>概要{ 66.67% }</a>
+        <a class="btn btn-warning" onclick='javascript:showCase(4)'>错误{ 1 }</a>
         <a class="btn btn-danger" onclick='javascript:showCase(1)' style='background:red'>失败{ 0 }</a>
-        <a class="btn btn-success" onclick='javascript:showCase(2)'>通过{ 0 }</a>
-        <a class="btn btn-info" onclick='javascript:showCase(3)'>所有{ 2 }</a>
+        <a class="btn btn-success" onclick='javascript:showCase(2)'>通过{ 2 }</a>
+        <a class="btn btn-info" onclick='javascript:showCase(3)'>所有{ 3 }</a>
     </div>
     <p></p>
     <table id='result_table' class="table table-bordered">
@@ -507,17 +507,17 @@
         </tr>
         
     <tr class='errorClass'>
-        <td>DataDrivenFrameWork.action.pageaction.assert_page_check</td>
-        <td>1</td>
+        <td>testsendmailwithattachment.share</td>
+        <td>3</td>
+        <td>2</td>
         <td>0</td>
-        <td>0</td>
         <td>1</td>
-        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+        <td><a href="javascript:showClassDetail('c1',3)">详情</a></td>
         <td>&nbsp;</td>
     </tr>
 
 <tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_assert_string_in_pagesource</div></td>
+    <td class='errorCase'><div class='testcase'>test_case01</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -529,7 +529,25 @@
             <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
                [x]</a>
         </div>
-        <pre>ft1.1: TypeError: test_assert_string_in_pagesource() missing 1 required positional argument: 'assertstring'
+        <pre>ft1.1: 启动谷歌浏览器--开始分享注册测试
+访问大咖直播间......
+进入直播间成功
+-------正在执行PC端注册自动化用例------
+13818808412
+&lt;function getcurrenttimes at 0x000000000390B268&gt;
+可见元素未找到定位方式，请确认定位方法是否正确! Message: 
+
+弹窗失败，请清除缓存再继续执行
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\testScripts\testsendmailwithattachment.py", line 93, in test_case01
+    raise e
+  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\testScripts\testsendmailwithattachment.py", line 80, in test_case01
+    addclick(zctcc)
+  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\action\pageaction.py", line 131, in addclick
+    raise e
+  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\action\pageaction.py", line 129, in addclick
+    locationtype.click()
+AttributeError: 'NoneType' object has no attribute 'click'
 </pre>
     </div>
     <!--css div popup end-->
@@ -538,54 +556,54 @@
     <td>无截图</td>
 </tr>
 
-    <tr class='errorClass'>
-        <td>testsendmailwithattachment.sendlogin</td>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-        <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
-        <td>&nbsp;</td>
-    </tr>
-
-<tr id='ft2.1' class='none'>
-    <td class='errorCase'><div class='testcase'>testsendmailwithattachment</div></td>
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_case02</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
-        错误</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
 
-    <div id='div_ft2.1' class="popup_window">
+    <div id='div_pt1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-            <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
                [x]</a>
         </div>
-        <pre>ft2.1: 启动谷歌浏览器
-Traceback (most recent call last):
-  File "C:\Users\Administrator\PycharmProjects\untitled\vern\lib\site-packages\selenium\webdriver\common\service.py", line 76, in start
-    stdin=PIPE)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 775, in __init__
-    restore_signals, start_new_session)
-  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\subprocess.py", line 1178, in _execute_child
-    startupinfo)
-FileNotFoundError: [WinError 2] 系统找不到指定的文件。
+        <pre>pt1.2: 启动谷歌浏览器--开始分享注册测试
+访问大咖直播间......
+进入wap直播间成功
+-------正在执行WAP注册自动化用例------
+弹窗成功
+13825486867
+注册弹出窗口成功,
+截图成功！
+当前是第 1次注册，注册成功
+退出浏览器成功
+已经全部执行完毕
+</pre>
+    </div>
+    <!--css div popup end-->
 
-During handling of the above exception, another exception occurred:
+    </td>
+    <td>无截图</td>
+</tr>
 
-Traceback (most recent call last):
-  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\testScripts\testsendmailwithattachment.py", line 18, in testsendmailwithattachment
-    open_browser("chrome")
-  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\action\pageaction.py", line 48, in open_browser
-    raise e
-  File "C:\Users\Administrator\PycharmProjects\untitled\DataDrivenFrameWork\action\pageaction.py", line 40, in open_browser
-    chrome_options = chrome_options
-  File "C:\Users\Administrator\PycharmProjects\untitled\vern\lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 73, in __init__
-    self.service.start()
-  File "C:\Users\Administrator\PycharmProjects\untitled\vern\lib\site-packages\selenium\webdriver\common\service.py", line 83, in start
-    os.path.basename(self.path), self.start_error_message)
-selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_case03</div></td>
+    <td colspan='5' align='center'>
 
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+            <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+               [x]</a>
+        </div>
+        <pre>pt1.3: 启动谷歌浏览器--开始分享注册测试
+访问大咖直播间......
+退出浏览器成功
 </pre>
     </div>
     <!--css div popup end-->
@@ -596,10 +614,10 @@ selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' execu
 
         <tr id='total_row'>
             <td>总计</td>
+            <td>3</td>
             <td>2</td>
             <td>0</td>
-            <td>0</td>
-            <td>2</td>
+            <td>1</td>
             <td>&nbsp;</td>
             <th>&nbsp;</th>
         </tr>
@@ -635,9 +653,9 @@ selenium.common.exceptions.WebDriverException: Message: 'chromedriver.exe' execu
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:0, name:'通过'},
+                        {value:2, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:2, name:'错误'}
+                        {value:1, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {

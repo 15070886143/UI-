@@ -6,11 +6,11 @@
 # @File    : varconfig.py
 # @Software: PyCharm\
 
-from DataDrivenFrameWork.util.readExcel import ParseExcel
+from untitled.DataDrivenFrameWork.util.readExcel import ParseExcel
 import os
 import openpyxl
 from openpyxl.styles import Font, colors, Alignment
-from DataDrivenFrameWork.util.logger import *
+from untitled.DataDrivenFrameWork.util.logger import *
 # from DataDrivenFrameWork.action.pageaction import assert_page_check
 #实例化断言方法
 # check = assert_page_check()

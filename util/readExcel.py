@@ -7,7 +7,7 @@
 import openpyxl
 #导入样式
 from openpyxl.styles import Font, colors, Alignment
-from DataDrivenFrameWork.config.varconfig import *
+from untitled.DataDrivenFrameWork.config.varconfig import *
 import xlrd
 import  time
 class ParseExcel(object):
@@ -98,6 +98,11 @@ class ParseExcel(object):
             return  cols
         except Exception as e:
             raise  e
+
+    def getcolrow(self,sheet,rowsno,colsno):
+        #获取某行某一列
+        pass
+
     def dict_data(self,sheet):
         # 打开excel文件
         self.data = xlrd.open_workbook(sheet)
@@ -142,9 +147,11 @@ class ParseExcel(object):
             return r
 
     def getcellofvalue(self,sheet,coordinate = None,rowno = None,colsno=None):
+        #获取某一行某一列的数据，sheet:第几个sheet表，返回真实数据
         #根据单元格所在位置索引获取该单元格中的值，从1开始
         #sheet.cell(row=1,column=1).value,表示Excel中第一行第一列的值
         if coordinate != None:
+
             try:
                 return sheet[coordinate].value
             except Exception as e:
@@ -160,7 +167,7 @@ class ParseExcel(object):
     def getcellofboject(self,sheet,coordinate = None,rownoo = None,colsno = None):
         #获取某个单元格的对象，可以根据单元格所在位置的数字索引
         #也可以直接根据Excel中单元格的编码及坐标
-        #如getcellboject(sheet,coordinate = 'A') or getgetcellboject(sheet,rowno=1,colsno=2)
+        #如getcellboject(sheet,coordinate = 'A3') or getgetcellboject(sheet,rowno=1,colsno=2)
         if coordinate!=None:
             try:
                 return sheet.cell(coordinate=coordinate)
@@ -241,20 +248,8 @@ if __name__=='__main__':
         print('通过index序号获取sheet对象的名字',pe.getSheetbyindex(0).title)
         sheet = pe.getSheetbyindex(0)
         sheet1 = pe.getSheetByname('测试用例')
-        # print(pe.getrow(sheet,2),'2222')
-        # print(pe.getColumn(sheet,3))
-        # # print(type(sheet))
-        # print(pe.getrownumber(sheet))
-        # # print(pe.getcolsnumber(sheet))
-        # print(pe.getrow(sheet,2))
-        for i in pe.dict_data(sheet):
-            print(i)
-        # print(pe.getcellofvalue(sheet,rowno=1,colsno=2))
-        # pe.writecellcurrenttime(sheet,rowno=5,colsno=8,style=colordict[1])
-        # pe.writecell(sheet,u'我爱你',rowno=5,colsno=5,style=colordict[1])
-        # pe.writeexcel(sheet,10,10,value='杨盼',style=colordict[0])
-        pe.dict_data(sheet)
 
+        print(pe.getcellofboject(sheet=sheet,coordinate="C1"))
     except Exception as e:
         raise e
 

@@ -17,6 +17,7 @@ def getcurrentdate():
         str(timetup.tm_mon) + '-' + str(timetup.tm_mday)
     return currentdate
 
+
 #获取当前时间
 def getcurrenttime():
     #获取当前日期和时间
@@ -25,6 +26,10 @@ def getcurrenttime():
     nowtime = timestr.strftime('%H-%M-%S-%f')
     return  nowtime
 
+#获取当前年月日加时
+def getcurrenttimes():
+    times =  time.strftime('%Y%m%d%H', time.localtime(time.time()))
+    return times
 #创建截图存放的目录
 def createcurrentdatedir():
     #创建截图目录名称为时间格式
@@ -33,3 +38,8 @@ def createcurrentdatedir():
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     return dirname
+
+# 清除浏览器cookies
+
+
+
