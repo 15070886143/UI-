@@ -27,7 +27,7 @@ def test_testsendmailandcreatecontacts():
         #记录需要执行的用例个数
         requiredcase = 0
         for idx,i in enumerate(isexecutecolumn[1:]):
-            print('"%s %s"'%(idx,i))
+            print(f'"{idx} {i}"')
             #因为用例sheet的第一行为标题行，无须执行
             casename = excelobj.getcellofvalue(casesheet,rowno=idx+2,colsno=testcase_testcasename)
 
@@ -58,17 +58,16 @@ def test_testsendmailandcreatecontacts():
                     #获取第idx+1测试用例使用的数据sheet对象[步骤工作表]
                     datasheetobj = excelobj.getSheetByname(datasheetname)
 
-                    #通过数据驱动框架执行添加联系人
-                    result = createcontacts.datadriverfun(setpsheetobj,datasheetobj)
-                    #如果为真
-                    if result:
-                        print(u'用例 "%s" 执行成功' % casename)
+                    if result := createcontacts.datadriverfun(
+                        setpsheetobj, datasheetobj
+                    ):
+                        print(f'用例 "{casename}" 执行成功')
                         successfulcase += 1
                         #想用例表中写入测试结果
                         writetestresult(casesheet,rowno=idx+2,colsno="testdata",
                                         testresult='pass')
                     else:
-                        print(u'用例 "%s" 执行失败' % casename)
+                        print(f'用例 "{casename}" 执行失败')
                         writetestresult(casesheet, rowno=idx + 2, colsno="testdata",
                                         testresult='faild')
 
@@ -80,7 +79,7 @@ def test_testsendmailandcreatecontacts():
                     stepnums = excelobj.getrownumber(casestepobj)
                     #记录成功数
                     successfulstep = 0
-                    print(u'测试用例一共 %s 步' % stepnums)
+                    print(f'测试用例一共 {stepnums} 步')
                     #因为从第二行开始，所有总数要加一
                     for index in range(2,stepnums+1):
                         #获取步骤sheet中第index行对象，获取所有数据
@@ -103,25 +102,24 @@ def test_testsendmailandcreatecontacts():
                             #如果操作值为数字型，将其转换字符串，方便拼接
                             operatevalue = str(operatevalue)
                         #构造需要执行的表达式，该表达式对应封装文件的pageaction方法
-                        tmpstr = "'%s','%s'" %(locationtype.lower(),#转换小写
-                                               locationexpression.replace("'",'"')#替换新值
-                                               ) if locationtype and locationexpression else ""
+                        tmpstr = (
+                            f"""'{locationtype.lower()}','{locationexpression.replace("'", '"')}'"""
+                            if locationtype and locationexpression
+                            else ""
+                        )
                         if tmpstr:
                             #如果为真，拼接操作值字符串
-                            tmpstr +=\
-                                ",u'" + operatevalue+"'" if operatevalue else ''
+                            tmpstr += f",u'{operatevalue}'" if operatevalue else ''
                         else:
-                            tmpstr += \
-                                "u'" + operatevalue + "'" if operatevalue else ''
-                        runstr = keyword + '('+tmpstr +')'
+                            tmpstr += f"u'{operatevalue}'" if operatevalue else ''
+                        runstr = f'{keyword}({tmpstr})'
                         try:
                             #     #通过eval函数，讲拼接的页面动作函数调用的字符串表示
                             #     #当成有效的Python表达式执行，从而执行测试步骤的sheet中
                             #     #关键字在ageaction.py文件中对应的映射方法,来完成页面元素的操作
-                                print(eval(runstr))
+                            print(eval(runstr))
                         except Exception as e:
-                            print(u'执行步骤 “%s” 发生异常' \
-                                  % steprow[teststep_teststepdescribe - 1],e)
+                            print(f'执行步骤 “{steprow[teststep_teststepdescribe - 1]}” 发生异常', e)
                             #截取异常屏幕图片
                             capturepic = capture_screen()
                             #获取详细的异常堆栈信息
@@ -132,8 +130,7 @@ def test_testsendmailandcreatecontacts():
                                             errorinfo=str(errorinfo),picpath=capturepic)
                         else:
                             successfulstep += 1
-                            print(u'执行步骤 “%s” 成功' \
-                                  % steprow[teststep_teststepdescribe - 1])
+                            print(f'执行步骤 “{steprow[teststep_teststepdescribe - 1]}” 成功')
                             writetestresult(casestepobj,rowno=index,colsno='casestep'
                                                 ,testresult='pass')
 
@@ -141,13 +138,13 @@ def test_testsendmailandcreatecontacts():
                         successfulcase += 1
                         # 如果成功执行的数量等于步骤中给出的步骤数
                         # 说明第idx+2行的数据执行通过，写入通过信息
-                        print(u"用例 ’%s‘ 执行通过" % casename)
+                        print(f"用例 ’{casename}‘ 执行通过")
                         writetestresult(casesheet,
                                         rowno=idx + 2, colsno='testdata',
                                         testresult='pass')
                     else:
                         # 写入失败信息
-                        print(u"用例 ’%s‘ 执行失败" % casename)
+                        print(f"用例 ’{casename}‘ 执行失败")
                         writetestresult(casesheet,
                                         rowno=idx + 2, colsno='testdata',
                                         testresult='faild')

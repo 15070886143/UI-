@@ -27,30 +27,38 @@ class waitutil(object):
     def presenceofelementlocated(self,locatormethod,locatorexpression):
         '显示等待页面元素出现在DOM中，单不一定可见，存在则返回该页面元素对象'
         try:
-            #调用until方法，判断是否返回为真
-            element = self.wait.until(
-                #显示等待方法，根据传入的定位方式和值，查找页面元素至少一个出现，为真返回数据，否则异常
-                EC.presence_of_element_located((self.locationtypeDict[locatormethod.lower()],locatorexpression)))
-            return element
+            return self.wait.until(
+                # 显示等待方法，根据传入的定位方式和值，查找页面元素至少一个出现，为真返回数据，否则异常
+                EC.presence_of_element_located(
+                    (
+                        self.locationtypeDict[locatormethod.lower()],
+                        locatorexpression,
+                    )
+                )
+            )
         except Exception as e:
             print(u'不一定可见元素未找到定位方式，请确认定位方法是否正确!',e)
     def frametobeavailableandswitchtolt(self,locationtype,locatorexpression):
         '检查frame是否 存在，存在则切换进入frame控件中'
         try:
-             element = self.wait.until(
-                EC.frame_to_be_available_and_switch_to_it((
-                    self.locationtypeDict[locationtype],locatorexpression)))
-             return element
+            return self.wait.until(
+                EC.frame_to_be_available_and_switch_to_it(
+                    (self.locationtypeDict[locationtype], locatorexpression)
+                )
+            )
         except Exception as e:
             print('定位超时，frame不存在，切入失败',e)
     def visibilityofelementlocated(self,locationtype,locatorexpression):
         '显示等待页面元素出现在DOM中，并且可见，存在返回页面对象'
         try:
-            # 显示等待方法，根据传入的定位方式和值，查找页面元素是否出现，为真返回数据，否则异常
-            element = self.wait.until(
-                EC.visibility_of_element_located((
-                    self.locationtypeDict[locationtype.lower()],locatorexpression)))
-            return element
+            return self.wait.until(
+                EC.visibility_of_element_located(
+                    (
+                        self.locationtypeDict[locationtype.lower()],
+                        locatorexpression,
+                    )
+                )
+            )
         except Exception as e:
             print(u'可见元素未找到定位方式，请确认定位方法是否正确!',e)
 

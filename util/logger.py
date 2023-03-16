@@ -16,15 +16,14 @@ class logger():
         #定义log级别，定义debug后，所有类型都会打印
         self.logger.setLevel(logging.DEBUG)
         timetup = time.localtime()
-        # 获取年月日
-        currentdate = str(timetup.tm_year) + '-' + \
-                      str(timetup.tm_mon) + '-' + str(timetup.tm_mday)
-        log_names = '../log/'
-
         # #如果没有log目录，则创建
         # if not os.path.exists(log_names):os.makedirs(log_names)
         #防止请求重复的日志
         if not self.logger.handlers:
+                # 获取年月日
+            currentdate = f'{str(timetup.tm_year)}-{str(timetup.tm_mon)}-{str(timetup.tm_mday)}'
+            log_names = '../log/'
+
             #设置当前时间
             # rq = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
             #设置存放日志的名字
@@ -57,24 +56,22 @@ class logger():
     def getlog(self):
          return self.logger
 def write(message):
-        messages = str(message)
+    messages = str(message)
 
-        ct = time.time()
-        local_time = time.localtime(ct)
-        currentdate = str(local_time.tm_year) + '-' + \
-                      str(local_time.tm_mon) + '-' + str(local_time.tm_mday)
-        data_head = time.strftime("%Y-%m-%d %H:%M:%S", local_time)
-        data_secs = (ct - int(ct)) * 1000
-        time_stamp = "%s.%03d" % (data_head, data_secs)
-        log_names = '../log/'
-        log_name = log_names+currentdate + '.log'
-        try:
-            log = open(log_name,'a')
-            terminal = sys.stdout
-            terminal.write(time_stamp+': '+messages)
-            log.write(time_stamp+': '+messages+'\n')
-        except Exception as e:
-            raise e
+    ct = time.time()
+    local_time = time.localtime(ct)
+    currentdate = f'{str(local_time.tm_year)}-{str(local_time.tm_mon)}-{str(local_time.tm_mday)}'
+    data_head = time.strftime("%Y-%m-%d %H:%M:%S", local_time)
+    data_secs = (ct - int(ct)) * 1000
+    log_name = f'../log/{currentdate}.log'
+    time_stamp = "%s.%03d" % (data_head, data_secs)
+    try:
+        log = open(log_name,'a')
+        terminal = sys.stdout
+        terminal.write(f'{time_stamp}: {messages}')
+        log.write(f'{time_stamp}: {messages}' + '\n')
+    except Exception as e:
+        raise e
 
 if __name__=='__main__':
     logger = logger()

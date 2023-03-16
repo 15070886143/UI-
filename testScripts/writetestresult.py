@@ -33,17 +33,16 @@ def writetestresult(sheetobj,rowno,colsno,testresult,errorinfo= None,picpath= No
             #在测试步骤sheet中，写入测试时间
             excelobj.writecellcurrenttime(sheetobj,rowno= rowno,
                                           colsno=colsdict[colsno][0])
-        if  errorinfo and picpath:
+        if errorinfo and picpath:
             #在测试步骤sheet中，写入异常信息
             excelobj.writecell(sheetobj,content=errorinfo,rowno=rowno,colsno=teststep_errorinfo)
             #写入异常截图路径
             excelobj.writecell(sheetobj,content=picpath,rowno=rowno,colsno=teststep_errorpic)
-        else:
-            if colsno =='casestep':
-                # 在测试步骤表中，清空异常信息单元格
-                excelobj.writecell(sheetobj,content='',rowno=rowno,colsno=teststep_errorinfo)
-                #在测试步骤表中，清空异常信息单元格
-                excelobj.writecell(sheetobj,content='',rowno=rowno,colsno=teststep_errorpic)
+        elif colsno =='casestep':
+            # 在测试步骤表中，清空异常信息单元格
+            excelobj.writecell(sheetobj,content='',rowno=rowno,colsno=teststep_errorinfo)
+            #在测试步骤表中，清空异常信息单元格
+            excelobj.writecell(sheetobj,content='',rowno=rowno,colsno=teststep_errorpic)
 
     except Exception as e:
         print(e,u'写入Excel时发生异常')
