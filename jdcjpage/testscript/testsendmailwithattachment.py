@@ -33,8 +33,8 @@ class share(unittest.TestCase):
         print(u'访问大咖直播间......')
         #调取配置文件URL
     #PC端分享注册自动化
-    def cgtanchang(location):
-        if location:
+    def cgtanchang(self):
+        if self:
             print('注册弹出窗口成功,')
             capture_screen()
         else:
@@ -81,11 +81,11 @@ class share(unittest.TestCase):
                     #获取退出
                     waitvisibilityofelementlocated('xpath','//span[text()="退出"]').click()
                     visit_url(PC_url)
-                    print('当前是第 %s次注册，注册成功' % req)
-                    mylog.info('当前是第 %s次注册，注册成功' % req)
+                    print(f'当前是第 {req}次注册，注册成功')
+                    mylog.info(f'当前是第 {req}次注册，注册成功')
                 elif req == i:
                     print('已经全部执行完毕')
-                    mylog.info('已全部OK，用例%s成功' % (req))
+                    mylog.info(f'已全部OK，用例{req}成功')
                     quit()
                 else:
                     print('用例执行失败')
@@ -104,12 +104,14 @@ class share(unittest.TestCase):
                     for i,index in enumerate(list_url):
                         sum +=1
                         # 调用action的断言方法
-                        print('--正在执行---第%s次---WAP注册自动化用例--' %sum)
+                        print(f'--正在执行---第{sum}次---WAP注册自动化用例--')
                         visit_url(index)
-                        #等待弹窗元素出现
-                        tanc = waitvisibilityofelementlocated('xpath','//div[@id="logindialog"]')
-                        if tanc:print('弹窗成功')
-                        else:print('弹窗失败，请清除缓存再继续执行')
+                        if tanc := waitvisibilityofelementlocated(
+                            'xpath', '//div[@id="logindialog"]'
+                        ):
+                            if tanc:print('弹窗成功')
+                        else:
+                            print('弹窗失败，请清除缓存再继续执行')
                         #获取手机号码文本框
                         writephone = waitvisibilityofelementlocated('xpath', '//input[@id="loginphone"]')
                         # 获取手机号码
@@ -127,17 +129,17 @@ class share(unittest.TestCase):
                         share.cgtanchang(queren)
                         sleep(1)
                         addclick(queren)
-                        print('当前是第 %s次注册，注册成功' % sum)
-                        mylog.info('当前是第 %s次注册，注册成功' % sum)
+                        print(f'当前是第 {sum}次注册，注册成功')
+                        mylog.info(f'当前是第 {sum}次注册，注册成功')
                         #清除cookies
                         de_cookies()
                         sleep(2)
                         visit_url(index)
                 elif sum==su:
-                        print('总共%s用例，已经全部执行完毕' %(sum))
-                        mylog.info('已全部OK，用例%s成功' % (sum))
-                        quit()
-                        break
+                    print(f'总共{sum}用例，已经全部执行完毕')
+                    mylog.info(f'已全部OK，用例{sum}成功')
+                    quit()
+                    break
                 else:
                     print('注册失败')
                     break
@@ -159,7 +161,7 @@ class share(unittest.TestCase):
                 if req < i:
                     req += 1
                     # 单机登陆
-                    print('--正在执行---第%s次---WAP注册自动化用例--' % req)
+                    print(f'--正在执行---第{req}次---WAP注册自动化用例--')
                     # 等待弹窗元素出现
                     tanc = waitvisibilityofelementlocated('xpath', '//div[@id="logindialog"]')
                     assert_string_in_pagesource(tanc)
@@ -185,15 +187,15 @@ class share(unittest.TestCase):
                     assert_string_in_pagesource(queren.text)
                     sleep(1)
                     addclick(queren)
-                    print('当前是第 %s次注册，注册成功' % req)
-                    mylog.info('当前是第 %s次注册，注册成功' % req)
+                    print(f'当前是第 {req}次注册，注册成功')
+                    mylog.info(f'当前是第 {req}次注册，注册成功')
                     # 清除cookies
                     de_cookies()
                     sleep(2)
                     visit_url(WAP_url)
                 elif req == i:
                     print('已经全部执行完毕')
-                    mylog.info('已全部OK，用例%s成功' % (req))
+                    mylog.info(f'已全部OK，用例{req}成功')
                 else:
                     print('用例执行失败')
         except Exception as e:

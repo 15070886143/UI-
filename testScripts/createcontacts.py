@@ -27,13 +27,13 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
         requiredatas = 0
         #从dataisexecutecolumn第二个参数开始
         for idx,data in enumerate(dataisexecutecolumn[1:]):
-            print("%s %s" % (idx,data))
+            print(f"{idx} {data}")
             #遍历数据源表，准备进行数据驱动测试
             #因为第一行是标题行，所以从第二行开始遍历
             # 如果该列为y，执行
             if data =='y':
                 #每遍历一次，行+1
-                print(u"开始添加联系人 '%s'" % emailcolumn[idx + 1])
+                print(f"开始添加联系人 '{emailcolumn[idx + 1]}'")
                 requiredatas += 1
                 #定义记录执行成功步骤变数量
                 successstep = 0
@@ -68,21 +68,21 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                             datasourcesheetobj,
                             coordinate=coordinate
                         )
-                    tmpstr = "'%s','%s'" % (locationtype.lower(),  # 转换小写
-                                            locatorexpression.replace("'", '"')  # 替换新值
-                                            ) if locationtype and locatorexpression else ""
+                    tmpstr = (
+                        f"""'{locationtype.lower()}','{locatorexpression.replace("'", '"')}'"""
+                        if locationtype and locatorexpression
+                        else ""
+                    )
 
                     if isinstance(operatevalue,int):
                         operatevalue = str(operatevalue)
 
                     if tmpstr:
                         # 如果为真，拼接操作值字符串
-                        tmpstr += \
-                            ",u'" + operatevalue + "'" if operatevalue else ''
+                        tmpstr += f",u'{operatevalue}'" if operatevalue else ''
                     else:
-                        tmpstr += \
-                            "u'" + operatevalue + "'" if operatevalue else ''
-                    runstr = keyword + '(' + tmpstr + ')'
+                        tmpstr += f"u'{operatevalue}'" if operatevalue else ''
+                    runstr = f'{keyword}({tmpstr})'
                     print(runstr)
                     try:
                         #     #通过eval函数，讲拼接的页面动作函数调用的字符串表示
@@ -90,8 +90,7 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                         #     #关键字在ageaction.py文件中对应的映射方法,来完成页面元素的操作
                         eval(runstr)
                     except Exception as e:
-                        print(u'执行步骤 “%s” 发生异常'\
-                              % rowobj[teststep_teststepdescribe-1],e)
+                        print(f'执行步骤 “{rowobj[teststep_teststepdescribe - 1]}” 发生异常', e)
                         # 截取异常屏幕图片
                         capturepic = capture_screen()
                         # 获取详细的异常堆栈信息
@@ -103,8 +102,7 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                                         picpath=capturepic)
                     else:
                         successstep +=1
-                        print(u'执行步骤 “%s” 成功' \
-                              %rowobj[teststep_teststepdescribe-1])
+                        print(f'执行步骤 “{rowobj[teststep_teststepdescribe - 1]}” 成功')
                         writetestresult(sheetobj=stepsheetobj,
                                         rowno=index, colsno='casestep',
                                         testresult='pass')
@@ -135,10 +133,7 @@ def datadriverfun(datasourcesheetobj,stepsheetobj):
                                 testresult='')
         #当执行完成之后，如果执行成功数等于需要被执行数时，把值返回，
         # 供testsendmailandcreatecontacts文件中的数据驱动调用
-        if requiredatas == successdatas:
-            return 1
-        return 0
-
+        return 1 if requiredatas == successdatas else 0
     except Exception as e:
         raise e
 #注释：用于实现向邮箱添加联系人的数据驱动框架部分

@@ -34,9 +34,7 @@ class ParseExcel(object):
     def getSheetByname(self,sheetname):
         #根据sheet名获取该sheet对象
         try:
-            #获取全部sheet
-            sheet = self.workbook.get_sheet_by_name(sheetname)
-            return sheet
+            return self.workbook.get_sheet_by_name(sheetname)
         except Exception as e:
             raise e
     def getSheetbyindex(self,sheetindex):
@@ -47,9 +45,7 @@ class ParseExcel(object):
         except Exception as e :
             print(e)
             raise e
-        #在返回所有的sheet中，根据索引返回到对象
-        sheet = self.workbook.get_sheet_by_name(sheetname)
-        return sheet
+        return self.workbook.get_sheet_by_name(sheetname)
     #获取sheet中最大行数
     def getrownumber(self,sheet):
         return sheet.max_row
@@ -77,25 +73,14 @@ class ParseExcel(object):
     #         raise e
     def getrow(self,sheet,nows):
         try:
-            rows = []
-            for cell in list(sheet.rows)[nows-1]:
-                row = cell.value
-                rows.append(row)
-            return rows
+            return [cell.value for cell in list(sheet.rows)[nows-1]]
         except Exception as e:
             raise e
     def getColumn(self,sheet,colsno):
         # 获取sheet某一列，返回这一列所有的数据
         # 下标1开始，sheet.rows[1]表示第一列
         try:
-            #创建空列表，用于存储返回信息
-            cols = []
-            #遍历某列数据
-            for cell in list(sheet.columns)[colsno-1]:
-                col = cell.value
-                #添加到空对象
-                cols.append(col)
-            return  cols
+            return [cell.value for cell in list(sheet.columns)[colsno-1]]
         except Exception as e:
             raise  e
 
@@ -123,17 +108,10 @@ class ParseExcel(object):
         else:
             # 设置空list，用来存储文件中的数据
             r = []
-            # 设置起始值
-
-            # 设置遍历的起始行数
-            j = 1
-
             # 因为第一行是标题所以总行数要-1
-            for i in list(range(self.rowNum - 1)):
+            for j, i in enumerate(list(range(self.rowNum - 1)), start=1):
                 # 创建空对象
-                s = {}
-                # 从第二行取对应values值
-                s['rowNum'] = i + 2  # 当前i=0
+                s = {'rowNum': i + 2}
                 # values=第二行的数据，此时j是1
                 values = self.table.row_values(j)
                 # 遍历列数，总共13,
@@ -142,8 +120,6 @@ class ParseExcel(object):
                     s[self.keys[x]] = values[x]
                 # 因为val值赋给了keys，所以把值s拿出来放到新建的list中r
                 r.append(s)
-                # 从一行开始读取数据，最大为rowNum的行数
-                j += 1
             return r
 
     def getcellofvalue(self,sheet,coordinate = None,rowno = None,colsno=None):
@@ -173,7 +149,7 @@ class ParseExcel(object):
                 return sheet.cell(coordinate=coordinate)
             except Exception as e:
                 raise  e
-        elif coordinate == None and rownoo is not None and colsno is not None:
+        elif rownoo is not None and colsno is not None:
             try:
                 return sheet.cell(row = rownoo,column = colsno)
             except Exception as e:
@@ -193,7 +169,7 @@ class ParseExcel(object):
                 self.workbook.save(self.excelFile)
             except Exception as e:
                 raise e
-        elif coordinate == None and rowno is not None and colsno is not None:
+        elif rowno is not None and colsno is not None:
             try:
                 sheet.cell(row=rowno, column=colsno).value = content
                 if style:
@@ -219,8 +195,7 @@ class ParseExcel(object):
                 self.workbook.save(self.excelFile)
             except Exception as e:
                 raise e
-        # 如果传来的值不为空
-        elif coordinate == None and rowno is not None and colsno is not None:
+        elif rowno is not None and colsno is not None:
             try:
                 # 在对应的行和列添加时间
                 sheet.cell(row=rowno, column=colsno).value = currenttime

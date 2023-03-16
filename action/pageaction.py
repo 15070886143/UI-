@@ -141,8 +141,7 @@ def title(*args):
 def attribute(locationtype,locatorexpression,assging):
     global driver
     try:
-        assert_attrbute = str(locationtype.get_attribute(locatorexpression))
-        return assert_attrbute
+        return str(locationtype.get_attribute(locatorexpression))
     except Exception as e:
         raise e
 #获取页面源代码
@@ -247,7 +246,7 @@ def zidingyi_jietu(locatetype,locatorexpression,*args):
         locations = element.location
         # 获取大小
         sizes = element.size
-        print('元素坐标和大小%s %s' % (locations,sizes))
+        print(f'元素坐标和大小{locations} {sizes}')
         #先截取全图
         quanping_jietu()
         #获取元素横坐标
@@ -301,9 +300,9 @@ def phoneNORandomGenerator():
     prelist=["130","131","132","133","134","135","136","137","138",
              "139","147","150","151","152","153","155","156","157",
              "158","159","186","187","188"]
-    #随机生成开头三位+随机遍历8个0到9的数字
-    phone= random.choice(prelist)+"".join(random.choice("0123456789") for i in range(8))
-    return phone
+    return random.choice(prelist) + "".join(
+        random.choice("0123456789") for _ in range(8)
+    )
 #刷新页面方法
 def refresh():
     global driver
@@ -359,10 +358,12 @@ def assert_attribute(locationtype,locatorexpression):
     try:
         #检查属性值是否在该源代码中
         assert assert_attrbute in attrbutehtml
-        print('断言成功，页面存在该元素，页面返回元素和属性值 [0%s="%s"]' % (locatorexpression,assert_attrbute))
+        print(f'断言成功，页面存在该元素，页面返回元素和属性值 [0{locatorexpression}="{assert_attrbute}"]')
     except Exception as e:
 
-        print('断言失败，页面不存在该元素，期望结果:%s，实际结果:%s，请进入浏览器打开F12进行定位！' % (locatorexpression,assert_attrbute))
+        print(
+            f'断言失败，页面不存在该元素，期望结果:{locatorexpression}，实际结果:{assert_attrbute}，请进入浏览器打开F12进行定位！'
+        )
 
 
 #获取整个文档的HTML对象，比page_source要好
@@ -378,9 +379,9 @@ def assert_get_html(locationtype,assertstring):
         attrbutehtml = str(locationtype.get_attribute('outerHTML'))
         #检查传入的参数是否在页面中
         assert assertstring in html_attr
-        print('断言成功，页面源代码包含元素：%s,可在该代码中查看：%s' % (assertstring,attrbutehtml))
+        print(f'断言成功，页面源代码包含元素：{assertstring},可在该代码中查看：{attrbutehtml}')
     except Exception as e:
-        print(u'断言失败，页面源代码不存在 “%s” 元素，请手动检查页面！' % assertstring,e)
+        print(f'断言失败，页面源代码不存在 “{assertstring}” 元素，请手动检查页面！', e)
 
 
 
@@ -390,8 +391,9 @@ def assert_string_in_pagesource(assertstring,*args):
     global driver
     try:
         #断言页面元素是否在页面显示，如果不存在，抛出格式化后的信息%s格式化字符串，否则抛出异常
-        assert assertstring in driver.page_source,\
-        u'%s not found in page source!' % assertstring
+        assert (
+            assertstring in driver.page_source
+        ), f'{assertstring} not found in page source!'
         print(u'断言成功')
     except AssertionError as e:
         print(u'断言失败')
@@ -405,8 +407,7 @@ def assert_title(titlestr,*args):
     global driver
     try:
         #断言页面的标题是否与预期一致
-        assert titlestr in driver.title, \
-        u'%s not found in title!' % titlestr
+        assert titlestr in driver.title, f'{titlestr} not found in title!'
         print(u'断言成功')
     except AssertionError as e:
         print(u'断言失败')

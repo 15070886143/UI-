@@ -28,16 +28,16 @@ class write():
                 sheet.cell(coordinate = coordinate).value = content
                 if  style is not None:
                     sheet.cell(coordinate = coordinate).\
-                        font = Font(color=pe.RGBDict[style])
+                            font = Font(color=pe.RGBDict[style])
                 pe.workbook.save(pe.excelFile)
             except Exception as e:
                 raise  e
-        elif coordinate == None and rowno is not None and colsno is not None:
+        elif rowno is not None and colsno is not None:
             try:
                 sheet.cell(row= rowno , column= colsno).value = content
                 if style:
                     sheet.cell(row = rowno,column=colsno).\
-                        font = Font(color=pe.RGBDict[style])
+                            font = Font(color=pe.RGBDict[style])
                 pe.workbook.save(pe.excelFile)
             except Exception as e:
                 raise  e
@@ -58,8 +58,7 @@ class write():
                 pe.workbook.save(pe.excelFile)
             except Exception as e:
                 raise e
-        #如果传来的值不为空
-        elif coordinate == None and rowno is not None and colsno is not None:
+        elif rowno is not None and colsno is not None:
             try:
                 #在对应的行和列添加时间
                 sheet.cell(row=rowno, column=colsno).value = currenttime
